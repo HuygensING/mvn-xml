@@ -1,0 +1,1588 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:teiex="http://www.tei-c.org/ns/Examples">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Richtlijnen voor digitale diplomatische edities in de reeks Middeleeuwse
+                    Verzamelhandschriften uit de Nederlanden</title>
+                <author>Peter Boot en Herman Brinkman m.m.v. Dieuwke van der
+                Poel</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>Versie 27 november 2012</date>
+                </edition>
+            </editionStmt><publicationStmt>
+                <p/>
+            </publicationStmt><sourceDesc>
+                <p>Oorspronkelijk document geschreven door Peter Boot en Herman Brinkman m.m.v.
+                    Dieuwke van der Poel</p>
+            </sourceDesc></fileDesc>
+        <encodingDesc>
+            <tagsDecl>
+                <rendition xml:id="r-red" scheme="css">color:red</rendition>
+            </tagsDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change when="2008-11-05" who="HB">Word-document ingeplakt en begonnen met codering</change>
+            <change when="2008-11-07" who="HB">Geheel nieuwe hoofdstukindeling, herschrijven van
+            passages</change>
+            <change when="2008-11-09" who="HB">Omwerking van hoofdstuk over globale structuur, 
+                verplaatsing van paragrafen, herschrijvingen, annotatie begonnen, literatuurlijst begonnen</change>
+            <change when="2012-11-20" who="PB">Aanpassingen ivm 'herstart' in 2012. gi voor elementnamen,
+                att voor attributen. egXML voor voorbeelden.</change>
+            <change when="2012-11-27" who="PB">Opmerkingen toegevoegd i.v.m. huidige stand van denken. Commentaar n.a.v. 
+                van VVEVM en gesprek Renée en Mike gedeeltelijk verwerkt. </change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div n="1" xml:id="RL1">
+                <head>Inleiding<note place="foot">De tekst van dit hoofdstuk is grotendeels overgenomen 
+                    uit <ref target="#Mertens1994">Mertens 1994</ref>.</note></head>
+                <div>
+                    <head>Het doel van de reeks</head>
+                    <p>In het tegenwoordige onderzoek van de oudere literatuur heeft de traditionele
+                        esthetische visie plaatsgemaakt voor een historische benadering. Zag de
+                        literatuurwetenschap voorheen de literatuur in de eerste plaats als een vorm
+                        van kunst die de taal als uitdrukkingsmiddel gebruikt, nu bekijkt ze de
+                        literatuur vooral ook als een cultuurhistorisch verschijnsel. Daardoor gaat
+                        de aandacht niet alleen uit naar de tekst zoals de scheppende kunstenaar hem
+                        bedoeld heeft, maar ook naar de tekst zoals die concreet overgeleverd is en
+                        gefunctioneerd heeft. Afzonderlijke teksten worden bestudeerd in het verband
+                        waarin ze in de middeleeuwse handschriften geplaatst zijn. Daarbij komen ook
+                        teksten aan bod die uit literair-esthetisch oogpunt minder groots, fraai of
+                        kunstig zijn, zoals artesliteratuur, geestelijk proza, gebruiksteksten en de
+                        kleine vormen in het algemeen. Ook komen zo spreukenverzamelingen,
+                        liedbundels, compilaties en andere vaste verbanden in het vizier, kortom
+                        overleveringsgehelen die het niveau van de afzonderlijke teksten
+                        overstijgen. Deze literaire verschijnselen konden moeilijk geplaatst worden
+                        in de literair-esthetische opvatting van literatuur als oorspronkelijke
+                        schepping van een groot kunstenaar.</p>
+                    <p>De auteur zal met zijn oeuvre altijd een belangrijk uitgangspunt en brandpunt
+                        van het letterkundig onderzoek blijven. Er zal dan ook behoefte blijven aan
+                        uitgaven die de oorspronkelijke tekst van de auteur trachten te
+                        reconstrueren. De cultuurhistorische visie op literatuur vraagt daarnaast om
+                        uitgaven die de concrete historische vorm weergeven waarin teksten
+                        (voor)gelezen en gebruikt werden. Verzamelhandschriften bieden vele
+                        invalshoeken voor dergelijk onderzoek. Deze materieel-tekstuele eenheden
+                        stellen het historische verband van de overlevering in de plaats van
+                        tekstkeuzen die gewoonlijk gebaseerd zijn op moderne, a-historische, vaak
+                        literair-esthetische overwegingen. Wanneer de literatuurwetenschap
+                        verzamelhandschriften als een van haar uitgangspunten neemt, verplicht ze
+                        zich ook aandacht te schenken aan de minder fraaie literatuur en aan de
+                        concrete context waarin de teksten indertijd geplaatst werden. Deze nog
+                        altijd actuele overwegingen vormden in 1994 de motieven voor de uitgave van
+                        middeleeuwse verzamelhandschriften uit de Nederlanden.</p>
+                    <p>Mede door de uitgave van een reeks delen is de discussie over wat wij onder
+                        een verzamelhandschrift dienen te verstaan, goed op gang gekomen. Het
+                        oorspronkelijke uitgangspunt dat een verzamelhandschrift een codex is die
+                        van meet af aan als materiële eenheid bedoeld is en waarin tenminste twee
+                        teksten zijn bijeengebracht, bleek, hoewel in de grond niet onjuist, toch
+                        bepaalde nuancering te behoeven. Reflectie op dit onderwerp door
+                        verscheidene onderzoekers heeft tot een preciesere conceptualisering van het
+                        begrip verzamelhandschrift geleid, een begrip waarachter in feite een
+                        veelheid aan historische verscheiningsvormen van de middeleeuwse codex
+                        schuilgaat. [nadere invulling door Hans Kienhorst?]</p>
+                    <p>Ondanks deze formele beschrijving van het begrip ‘verzamelhandschrift’ heeft
+                        deze reeks zich tot dusverre altijd in de eerste plaats gericht op
+                        handschriften waarvan het verzamelkarakter op de voorgrond treedt. Bekende
+                        voorbeelden zijn het in de reeks opgenomen handschrift-Van Hulthem en het
+                        Comburgse handschrift, die hoewel ze verzamelhandschriften van volkomen
+                        verschillende aard zijn, toch juist het verzamelaspect gemeenschappelijk
+                        hebben. Ook voor toekomstige uitgaven zal bij voorkeur worden gekozen voor
+                        in dit opzicht vergelijkbare handschriften.</p>
+                    <p>Het doel van de reeks diplomatische uitgaven is op korte termijn verantwoorde
+                        grondslagen te bieden voor literair-historisch, taalkundig of ander
+                        onderzoek van middeleeuwse teksten in de context waarin ze indertijd
+                        overgeleverd zijn. Het gaat er hier vooral om materiaal te leveren voor
+                        diepgaande studies en niet zozeer om afgeronde resultaten van dergelijke
+                        studies te presenteren. De uitgaven zullen (voor zover dat bij diplomatische
+                        uitgaven mogelijk is) vlot leesbaar zijn, echter zonder filologische en
+                        cultuurhistorische aantekeningen, die immers gedegen en langdurig
+                        vooronderzoek vergen.</p>
+                    <p>De diplomatische editie kan snel op ontwikkelingen in het onderzoek inspelen
+                        doordat zij in verhouding weinig onderzoek vereist. En ‘snel’ betekent in
+                        dit verband niet kortstondig of vluchtig. De diplomatische editie is immers
+                        geen voorlopige of lagere vorm van tekstuitgave. Als basisvorm van de
+                        uitgave blijft zij de hechte grondslag voor verdere studie en eventuele
+                        verdere, tekstkritische uitgaven. Zij bevat minder elementen die snel kunnen
+                        verouderen dan de kritische edities die voorzien zijn van uitgebreide
+                        filologische apparaten en letterkundige inleidingen. De combinatie van
+                        relatieve snelheid en grote duurzaamheid waren aanvankelijk de motieven om
+                        de methode van de diplomatische uitgave te verkiezen voor deze reeks en deze
+                        gelden nog steeds.</p>
+                    <p>In de inleiding op de tekstuitgave wordt dezelfde doelmatigheid nagestreefd.
+                        Uitsluitend die informatie wordt gegeven die op het uitgegeven handschrift
+                        betrekking heeft. Hierbij wordt bijzondere aandacht besteed aan de
+                        materiële, codicologische aspecten van het verzamelhandschrift dat
+                        uitgegeven wordt.</p>
+                    <p>Nadat in de editiereeks <title>Middeleeuwse Verzamelhandschriften uit de Nederlanden
+                        (MVN)</title> een aantal publicaties in boekvorm verscheen, is binnen de
+                        projectcommissie de behoefte ontstaan om voortaan naast uitgaven in boekvorm
+                        ook edities in digitale vorm te publiceren. Met de digitalisering en
+                        beschikbaarstelling van het eerste deel uit de MVN-reeks, 
+                        <title><ref target="http://www.huygensinstituut.knaw.nl/epub/mvn/geraardsbergen/">
+                        Het Geraardsbergse handschrift</ref></title>, werd in 2003, bij wijze van proef, 
+                        een nieuwe weg ingeslagen.
+                        Om een zo groot mogelijke duurzaamheid te waarborgen werd besloten de
+                        digitale edities in te richten in XML-formaat. Voor de codering van de
+                        teksten kon worden aangesloten bij de standaarden die werden ontwikkeld door
+                        het <ref target="http://www.tei-c.org/index.xml">Text Encoding Initiative</ref> 
+                        (<ref target="http://www.tei-c.org/Guidelines/P5/get_p5.xml">TEI Guidelines, versie P5</ref>). Slechts in gevallen
+                        waarin de aanbevelingen van het TEI niet voorzagen moest worden gezocht naar
+                        specifieke oplossingen voor coderingsvraagstukken.
+                        <hi rendition="#r-red">[PB: we streven er naar ook edities te kunnen aanmaken binnen het eLaborate platform]</hi>.</p>
+                    <p>Deze richtlijnen zijn allereerst bestemd voor editeurs die van plan zijn een
+                        deel te vervaardigen in de MVN-reeks. Ze zullen tevens als uitgangspunt
+                        dienen bij de vervaardiging van een digitale werkomgeving waarin veel van de
+                        XML-codering onzichtbaar kan blijven voor de terzake minder ervaren editeur.</p>
+                    <p>De basis van een MVN-editie wordt gevormd door een diplomatische uitgave van
+                        de teksten uit een handschrift. In een nieuw op te zetten reeks zullen ook
+                        kritische edities worden uitgebracht. Vooralsnog is het de bedoeling om de
+                        kritische edities in boekvorm te laten verschijnen en de digitale vorm voor
+                        te behouden aan de diplomatische uitgaven. Dit sluit overigens niet uit dat
+                        diplomatische uitgaven in bepaalde gevallen ook in boekvorm kunnen
+                        verschijnen. In elk geval zal aan elke editie, of ze nu alleen digitaal of
+                        ook als boek verschijnt, een XML-bestand ten grondslag liggen. 
+                        <hi  rendition="#r-red">[PB: dit is dus niet altijd het geval].</hi> In deze
+                        richtlijnen wordt getoond hoe een MVN-editie gestalte krijgt als
+                        XML-bestand.</p>
+                    <p>Voor kritische uitgaven zijn afzonderlijke richtlijnen beschikbaar.</p>
+                    <p>De voorbeelden in dit document gebruiken de XML-syntax. In het algemeen
+                        illustreren ze echter conceptuele vragen over de opbouw van de editie. Van
+                        toekomstige editeurs wordt niet noodzakelijkerwijs diepgaande vertrouwdheid
+                        verwacht met de XML-syntax.</p>
+                    <p>Een opmerking nog over de programma’s die gebruikt kunnen worden bij de
+                        vervaardiging van een digitale MVN-editie. In beginsel wordt er aan editeurs
+                        een werkomgeving aangeboden binnen de XML-editor Oxygen. Natuurlijk is het
+                        ook mogelijk om te werken met andere programma’s, voorwaarde is echter wel
+                        dat deze weten om te gaan met Unicode (in <ref target="#RL6">hoofdstuk
+                        6</ref> worden de Unicode-tekens opgesomd die voor MVN-edities gebruikt
+                        kunnen worden). </p>
+                </div>
+                <div>
+                    <head> Wat is een diplomatische uitgave?</head>
+                    <p>Onder diplomatische uitgave wordt hier een editie verstaan waaraan slechts
+                        één handschrift ten grondslag ligt en waarin de tekst en alle verdere
+                        grafische informatie weergegeven worden in overeenstemming met dit
+                        handschrift. Daarbij wordt niet gestreefd naar een typografische imitatie
+                        van het handschrift, maar naar een functionele weergave van de tekst. De
+                        functie van alle lettervormen en overige grafische verschijnselen uit het
+                        handschrift die de structuur en de betekenis van de tekst tot stand brengen,
+                        wordt zodanig gecodeerd dat er een typografische weergave in een webbrowser
+                        mogelijk wordt. Een belangrijke kanttekening hierbij is dat dezelfde
+                        grafische verschijnselen in het ene geval tot de tekst kunnen behoren en in
+                        het andere geval tot de esthetische en functionele aspecten van de
+                        tekstopmaak. Zo kan de kopiist een regel wit laten omdat hij onderaan de
+                        kolom niet aan een nieuwe tekst wil beginnen, terwijl hij elders bij het
+                        tekstbegin geen regel blanco laat. Zo’n witregel is in dat geval eerder een
+                        zaak voor de codicoloog-paleograaf dan voor de filoloog-tekstediteur.</p>
+                </div>
+            </div>
+            <div n="2" xml:id="RL2">
+                <head>De onderdelen van een digitale MVN-editie</head>
+                <p>Een editeur van een digitale MVN-editie vervaardigt de volgende onderdelen:</p>
+                <list>
+                    <item>Een XML-bestand met de transcriptie van de uitgegeven tekstverzameling</item>
+                    <item>Een XML-bestand met het voorwerk, de inleiding en het bijwerk 
+                        <hi rendition="#r-red">[PB: hier gaan we niet meer van uit. Voorwerk, inleiding en bijwerk worden 
+                        voorlopig aangemaakt in Wordpress. In de toekomst hopen we dat eLaborate hier in voorziet.]</hi></item>
+                    <item>Een set digitale foto's van het uitgegeven handschrift. Indien mogelijk
+                        wordt een complete set aangeleverd.</item>
+                </list>
+                <p>De inhoud van de twee XML-bestanden komt tot op zekere hoogte overeen met het 
+                    onderscheid in de gedrukte delen tussen het deel van het boek met de diplomatische weergave van de teksten uit het 
+                    handschrift en het overige deel van de editie. Verschillen zijn onder meer de plaats van 
+                    de Verantwoording van de editie, die nu is opgenomen in de het bestand met de transcriptie
+                    en de Registers, die nu zijn gïntegreerd in het transcriptiedeel.</p>
+                <p>In de volgende hoofdstukken wordt nauwkeurig uitgelegd hoe de beide XML-bestanden
+                    dienen te worden vormgegeven (<ref target="#RL3">hoofdstuk 3: De inleiding en
+                        het bijwerk</ref> en <ref target="#RL5">hoofdstuk 5: De globale structuur
+                        van het transcriptiedeel</ref>).</p>
+                <p> De twee bestanden verschillen behalve door
+                    hun inhoud ook in de mate van vrijheid die de editeur heeft. Voor het bestand
+                    met de inleiding is de editeur slechts gehouden aan enkele algemene richtlijnen
+                    die dienen ter structurering van zijn in principe vrije tekst. Voor het bestand met
+                    de transcriptie wordt gebruik gemaakt van een speciaal voor de reeks ontwikkeld
+                    MVN-sjabloon (een zgn. <q>template</q>). In het MVN-sjabloon is de hoofdstructuur
+                    van het XML-document, zoals dat nodig is voor de vervaardiging van de
+                    transcriptie reeds voorhanden.</p>
+                <p>Elk TEI-document bestaat uit een <gi>teiHeader</gi>, dat is een gedeelte met meta-informatie 
+                    over de overige tekst, en een <gi>text</gi> element, waarin de eigenlijke inhoud van het document
+                    is opgenomen. De wijze waarop de afzonderlijke onderdelen van een TEI-bestand
+                    moeten worden vormgegeven wordt besproken in de hoofdstukken <ref target="#RL3">3</ref> en
+                    <ref target="#RL5">5</ref>.  Voor de codering van de transcriptie bestaan 
+                    nauwkeurige richtlijnen die worden uiteengezet in de hoofdstukken <ref target="#RL5">5</ref> en
+                    <ref target="#RL6">6</ref>.</p>
+            </div>
+            <div xml:id="RL3">
+                <head>De inleiding en het bijwerk</head>
+                <p> <hi rendition="#r-red">PB: bijwerk komt dus in WordPress.</hi>Elke MVN-editie bestaat uit een inleiding, een tekstuitgave en verschillend
+                    bijwerk (samenvatting, bibliografie, lijst van afbeeldingen, etc.). Deze
+                    onderdelen, behalve de tekstuitgave, worden ondergebracht in een afzonderlijk XML-bestand dat wordt
+                    gecodeerd in <ref
+                        target="http://www.tei-c.org/release/doc/tei-p5-exemplars/html/teilite.doc.html"
+                        >TEI-Lite</ref>.  Als elk TEI-document valt dit document in twee delen uiteen:</p>
+                    <list>
+                        <item>de <gi>teiHeader</gi> van het bestand met de inleiding en het bijwerk</item>
+                        <item>een <gi>text</gi> element  met daarin de eigenlijke tekst van de inleiding en het bijwerk</item>
+                    </list>
+                    <div>
+                        <head>De <gi>teiHeader</gi> van het bestand met de inleiding en het bijwerk</head>
+                        <p>[nog te schrijven]</p>
+                    </div>
+                    <div>
+                        <head>Voorwerk, inleiding en bijwerk</head>
+                        <p>Het gedeelte na de <gi>teiHeader</gi> bestaat uit vrije tekst van de editeur.
+                            Nadere richtlijnen voor het schrijven van de inleiding en het bijwerk worden
+                            gegeven in <ref target="#RL3">hoofdstuk 3: De inleiding en het
+                                bijwerk</ref>. </p>
+                       <p>Hier volgt een korte toelichting op de inhoudelijke aspecten van de diverse onderdelen van voorwerk, inleiding
+                    en bijwerk. Vormgevingsaspecten zijn op deze plaats niet aan de orde, maar wel
+                    schenken we aandacht aan elementen van de presentatie die inhoudelijke keuzes
+                    met zich meebrengen, zoals de benaming van het handschrift, titelconventies,
+                    bestanddelen van de inhoudopgave, e.d.</p>
+                <p>Alle onderdelen van de editie worden in principe in het Nederlands geschreven.
+                    Hierbij wordt de voorkeurspelling toegepast. Gebruik van een andere taal dan het
+                    Nederlands is mogelijk, indien daar een gegronde reden voor bestaat.</p>
+                <div>
+                    <head>Titel</head>
+                    <p>Als hoofdtitel neemt de editeur de aanduiding voor het handschrift die
+                        traditioneel in het onderzoek gebruikt wordt. Als het handschrift nog niet
+                        zo’n ‘roepnaam’ heeft, dan bedenkt de editeur er een. De ondertitels en de
+                        vermelding van de editeur hebben een vaste vorm: Hs. [bewaarplaats,
+                        signatuur]. Diplomatische webeditie bezorgd door [naam/namen van de editeur
+                        (s)].Als de editeur bepaalde hoofdstukken niet zelf heeft geschreven worden
+                        de namen van de auteurs van die hoofdstukken aan de vermelding van de
+                        editeur toegevoegd, bijvoorbeeld: met een codicologische beschrijving door
+                        [naam].</p>
+                    <div>
+                        <head>Roepnaam</head>
+                        <p>Meestal bestaat de ‘roepnaam’ uit het woord handschrift en een nadere
+                            omschrijving (bijv. Het Comburgse handschrift, Het handschrift-Van
+                            Hulthem). Bij het bedenken van een roepnaam is het niet verstandig de
+                            huidige bewaarplaats als (enige) nadere omschrijving te gebruiken omdat
+                            dit te weinig kenmerkend is. Dit geldt in het bijzonder voor
+                            bewaarplaatsen als Berlijn, Brussel, Den Haag en Wenen.</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Inhoudsopgave</head>
+                    <p>Een gedetailleerde inhoudsopgave van de uitgave als geheel hoeft niet door de
+                        editeur te worden verzorgd. Dit overzicht wordt voor de webpagina afgeleid
+                        door het style-sheet. Een overzicht van de inhoud van het handschrift wordt
+                        wel door de editeur gemaakt.</p>
+                </div>
+                <div>
+                    <head>Karakteristiek</head>
+                    <p>Het eerste onderdeel van de inleiding is een samenvattend overzicht van de
+                        aard en inhoud van de tekstverzameling. In dit overzicht wordt gestreefd
+                        naar een karakterisering van de verzameling als geheel. Het is daarbij niet
+                        de bedoeling dat aan (alle) afzonderlijke teksten een bespreking wordt
+                        gewijd, maar dat veeleer de grote lijnen en de eigenaardigheden van de
+                        verzameling worden belicht.</p>
+                </div>
+                <div>
+                    <head>Geschiedenis van het onderzoek</head>
+                    <p>Op deze plaats geeft de editeur een bondige uiteenzetting van het eerdere
+                        onderzoek. Daarbij wordt vooral gelet op het onderzoek dat zich specifiek op
+                        het handschrift als tekstueel-materiële eenheid heeft gericht. Publikaties
+                        waarin het handschrift slechts gebruikt wordt als getuige van de
+                        overlevering, zijn uit dit oogpunt minder van belang.</p>
+                </div>
+                <div>
+                    <head>Taaleigen</head>
+                    <p>In een systematische, maar niet-uitputtende beschrijving wordt het taaleigen
+                        behandeld van de verschillende kopiisten van het handschrift. </p>
+                </div>
+                <div>
+                    <head>Inhoudsopgave van het handschrift</head>
+                    <p>Een gedetailleerde inhoudsopgave van de teksten in het verzamelhandschrift
+                        vermeldt de teksten die in het handschrift voorkomen, met hun opschrijft
+                        en/of beginwoorden en de foliumnummers, bladzijde- en kolomaanduidingen. De
+                        teksten worden in dit overzicht genummerd. Als een tekst reeds eerder naar
+                        ditzelfde handschrift is uitgegeven, wordt de uitgave hier vermeld. Is een
+                        tekst meermalen uitgegeven, dan wordt in elk geval de uitgave genoemd die
+                        het meest verantwoord is. Daarbij kan de editeur nog overwegingen laten
+                        meespelen, zoals de vraag welke uitgave het meest gangbaar of het recenst
+                        is, als het maar om een uitgave gaat die naar hedendaagse wetenschappelijke
+                        normen verantwoord wordt geacht. Desgewenst vermeldt de editeur meer dan een
+                        uitgave. De vermelding van een eerdere uitgave van een tekst gebeurt door
+                        middel van de gebruikelijke literatuurverwijzing (zie <ref target="#">paragraaf 0000</ref>).</p>
+                    <div>
+                        <head>Tekstnummering</head>
+                        <p>Heeft het handschrift een oorspronkelijke tekstnummering – zoals in het
+                            handschrift-Van Hulthem bijvoorbeeld het geval is – dan wordt deze
+                            overgenomen. Bij het coderen wordt het oorspronkelijke tekstnummer in het 
+                            betreffende <gi>text</gi> element als waarde van het <att>n</att>  attribuut gegeven. 
+                            Het <att>xml:id</att>  attribuut representeert dan de hiërachische geleding van de 
+                            tekstverzameling, zoals die door de editeur is vastgesteld (zie verder <ref target="#">paragraaf 0000</ref>). 
+                            Kent het handschrift geen oorspronkelijke tekstnummering, dan 
+                            worden de teksten genummerd door de editeur.
+                            Soms kan het wenselijk zijn dat de editeur een in het handschrift
+                            voorkomende tekstnummering aanvult of nader uitwerkt, zoals bijvoorbeeld
+                            in de editie van het handschrift-Van Hulthem (Brinkman &amp; Schenkel
+                            1999) gebeurt (vgl. aldaar de verzameling spreuken, tekst
+                        108.1-234).</p>
+                    </div>
+                    <div>
+                        <head>Identieke teksten</head>
+                        <p>Bij teksten die meer dan eens in het handschrift voorkomen, worden in de
+                            inhoudsopgave links aangebracht. Als teksten tevens in andere webedities
+                            binnen de MVN-reeks voorkomen, wordt eveneens een link aangebracht.</p>
+                    </div>
+                    <div>
+                        <head>Tekstgrenzen</head>
+                        <p>Juist in verzamelhandschriften kunnen zich twijfels omtrent de begrenzing
+                            van de afzonderlijke teksten voordoen. In dit geval stelt de editeur een
+                            oplossing voor en vermeldt hij zijn twijfels in de annotatie.</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Overzicht van afkortingen</head>
+                    <p>Een lijst van afkortingen met voorbeelden van hun oplossingen wordt, op basis
+                        van de codering gegenereerd in de webeditie. Opmerkingen over speciale
+                        gevallen maakt de editeur op deze plaats.</p>
+                </div>
+                <div>
+                    <head>Literatuuropgave</head>
+                    <p>De literatuuropgave (element <gi>listBibl</gi>) wordt als laatste hoofdstuk opgenomen. 
+                        Bibliografische referenties in de tekst zelf en in het
+                        transcriptiedeel bestaan uit verkorte titels (Berteloot 2002, of
+                        Verhandelingen 1883). Door middel van het <gi>ref</gi> element
+                        wordt in <att>target</att>  attribuut naar de bibliografie verwezen. De afzonderlijke 
+                        titelbeschrijvingen staan in het een <gi>bibl</gi> element dat wordt voorzien van een <att>xml:id</att> attribuut 
+                        dat bij voorkeur de vorm heeft van de verkorte bibliografische referentie, 
+                        evenwel zonder de daarin voorkomende spaties of het &amp;-teken. In de lopende tekst kan een verzijzing er zo uitzien:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+De eerste paragraaf van deze inleiding is ontleend aan <ref target="#Mertens1994">Mertens 1994</ref>.</egXML>
+                    <p>Daarbij verwijst #Mertens1994 naar de bibliografie waar de titel als volgt is beschreven:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <bibl xml:id="Mertens1994">
+                            <author>Mertens, Th.</author>
+                            <title>Richtlijnen voor de uitgave van Middeleeuwse Verzamelhandschriften uit de Nederlanden</title>.
+                            <pubPlace>Hilversum</pubPlace>:
+                            <publisher>Verloren</publisher>,
+                            <date>1994</date>.
+                        </bibl></egXML>
+                </div>
+                <div>
+                    <head>Afbeeldingen</head>
+                    <p>Indien mogelijk worden digitale kleurenopnamen aangeleverd van alle
+                        bladzijden van een handschrift, alsmede van de schutbladen en de band. De
+                        bestanden met de foto’s van de beschreven bladzijden worden gekoppeld aan de
+                        codering van de bladzijden in het transcriptiedeel. In het bestand met de inleiding 
+                        kunnen verwijzingen worden opgenomen naar afbeeldingen die ter illustratie dienen.</p>
+                </div>
+                <div>
+                    <head>Samenvatting</head>
+                    <p>De editeur voorziet de uitgave van een Engelstalige samenvatting van de
+                        inleiding. Als daar goede redenen voor zijn kan de samenvatting ook nog in
+                        een andere taal gepubliceerd worden. De uitgave van een verzamenhandschrift
+                        uit het Nederlands-Duitse grensgebied verdient bijvoorbeeld ook een
+                        samenvattende karakteristiek in het Duits; een handschrift waarin zowel
+                        Nederlandse als Franse teksten voorkomen, ook een samenvatting in het
+                    Frans.</p>
+                </div>
+                    </div>
+                </div>
+            <div n="4" xml:id="RL4">
+                <head>Richtlijnen voor de beschrijving van het handschrift</head>
+                <p>In de beschrijving van het handschrift moet tenminste aandacht worden besteed aan:</p>
+                <list>
+                    <item>Materiaal en samenstelling</item>
+                    <item>Watermerken (indien het handschrift uit papier is vervaardigd)</item>
+                    <item>Bladsignaturen en custoden</item>
+                    <item>Opmaak</item>
+                    <item>Schrift</item>
+                    <item>Tekstgeleding en rubricering</item>
+                    <item>Band</item>
+                    <item>Datering en lokalisering</item>
+                    <item>Geschiedenis</item>
+                    <item>Eigendomsnotities</item>
+                    <item>Gebruikerssporen</item>
+                </list>
+                <p>In een paragraaf <title>Besluit</title> worden de meest relevante bevindingen uit het 
+                    betreffende hoofdstuk bondig samengevat en worden zo mogelijk conclusies getrokken.</p>
+            </div>
+            <div n="5" xml:id="RL5">
+                <head>Het transcriptiebestand</head>
+                <p>Het transcriptiebestand valt uiteen in een gedeelte met meta-informatie over de 
+                        transcriptie en de getranscribeerde bron, en een deel dat de eigenlijke
+                        weergave van de teksten uit het handschrift bevat:</p>
+                    <list>
+                        <item>de <gi>teiHeader</gi> van het transcriptiebestand, waarin o.m. een beknopte
+                            beschrijving van het handschrift en een verantwoording van de editiewijze</item>
+                        <item>een <gi>text</gi> element met de transcriptie, waarin ook de annotatie en de
+                            lemmatisering voor de registers worden geïntegreerd.</item>
+                    </list>
+                    <div>
+                    <head>De <gi>teiHeader</gi> van het transcriptiebestand</head>
+                            <p>De informatie die door het element <gi>teiHeader</gi> wordt gemarkeerd, is
+                                afhankelijk van het gegeven of de digitale editie wordt vervaardigd naar een
+                                reeds bestaande boekpublicatie (zoals het geval was bij de digitalisering
+                                van MVN deel 1: het Geraardsbergse handschrift), of dat er rechtstreeks
+                                wordt geëditeerd naar een handschriftelijke bron. We bespreken hier dit
+                                laatste geval, omdat deze situatie zich naar verwachting het meest zal
+                                voordoen. Retro-digitalisering wordt in een aparte paragraaf behandeld [nog
+                                te schrijven].</p>
+                            <p>Wanneer een digitale editie wordt vervaardigd op basis van een
+                                tekstverzameling in handschrift, is het element <gi>teiHeader</gi> in
+                                hoofdlijnen volgt gestructureerd.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<teiHeader>
+    <fileDesc>
+        <titleStmt><title><!-- Titel --></title><author><!-- Auteur --></author></titleStmt>
+            <publicationStmt>
+                <p><!-- Gegevens over uitgave --></p>
+            </publicationStmt>
+            <sourceDesc>
+                <p><!-- Beknopte beschrijving van het handschrift --></p>
+            </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+<!--
+            <xi:include href="http://www.huygensinstituut.knaw.nl/projecten/mvn/webfiles/charDecl.xml" xmlns:xi="http://www.w3.org/2001/XInclude">
+                 <xi:fallback>
+                     <xi:include href="charDecl.xml"/>
+                 </xi:fallback>
+            </xi:include>
+-->     <editorialDecl>
+            <p><!-- Verantwoording van de editie --></p>
+     </editorialDecl>
+     </encodingDesc>
+     <profileDesc>
+            <handNotes>
+                <handNote xml:id="h1"><p><!-- Opmerkingen over de tekst- en kopiistenhanden --></p></handNote>
+            </handNotes>
+    </profileDesc>
+</teiHeader>
+                            </egXML>
+                            <p>De wijze waarop de tekst uitgegeven is, wordt verantwoord in het <gi>editorialDecl</gi> element. De editeur
+                                verwijst hier naar de algemene richtlijnen voor de uitgave en omschrijft
+                                waar hij in deze uitgave van die algemene richtlijnen is afgeweken. Daarbij
+                                geeft hij steeds aan waarom hij dat gedaan heeft.</p>
+                        <p>Het aantal handen wordt genoemd als waarde van het attribuut <att>hands</att> bij het
+                                <gi>handDesc</gi> element.</p>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                                <handDesc hands="2">
+                                    <handNote xml:id="SIGLEalfa"><p>Het handschrift is geschreven door twee kopiisten, alfa, die een textuialis schreef (textualis)en</p></handNote>
+                                    <handNote xml:id="beta"><p>beta, die een cursiva schreef</p></handNote>
+                                </handDesc>
+                            </egXML>
+                        <p><hi rendition="#r-red">PB: ik denk eerder aan een structuur als de volgende:</hi></p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <handDesc hands="2">
+                                <summary>Het handschrift is geschreven door twee kopiisten, alfa en beta</summary>
+                                <handNote xml:id="SIGLEalfa">kopiist alfa (textuialis)</handNote>
+                                <handNote xml:id="SIGLEbeta">kopiist beta (cursiva)</handNote>
+                            </handDesc>
+                        </egXML>
+                        <p>Een uitgebreide, ‘vertellende’ beschrijving van het handschrift, waaronder
+                                ook de opgave van de teksten is begrepen, is onderdeel van de inleiding tot
+                                de uitgave en vormt daarmee een onderdeel van het afzonderlijke XML-bestand
+                                waar ook de literatuuropgave en de samenvatting in worden opgenomen (zie
+                                <ref target="#RL3">hoofdstuk 3</ref>). Een beknopte, catalogus-achtige
+                                beschrijving van het handschrift krijgt een plaats in de teiHeader, en wel
+                                binnen het element <gi>msDesc</gi>, dat genest wordt in het element
+                                <gi>sourceDesc</gi> (zie hierboven). Een uitgewerkte toelichting op dit
+                                onderdeel is opgenomen als <ref target="#RL4">hoofdstuk 4 (Richtlijnen voor
+                                    de beschrijving van het handschrift)</ref>. [volgt]</p>
+                        </div>
+                        <div>
+                            <head>Het deel met de eigenlijke transcriptie</head>
+                            <p>Het geheel van de weergave van de teksten wordt beschouwd
+                                als <gi>text</gi> element. De annotatie en de registers worden op basis van lemmatisering buiten het
+                                document om gegenereerd en maken dus geen deel uit van de structuur van het
+                                XML-bestand.</p>
+                            <p>De kern van de editie, de middeleeuwse tekstverzameling, wordt aangeduid als
+                                element <gi>group</gi>. Deze <gi>group</gi> bestaat uit een aantal <gi>text</gi> elementen:
+                                dat zijn de afzonderlijke teksten. Wanneer teksten bijeenhoren en als het ware
+                                een verzameling binnen de verzameling vormen (zoals dat bijvoorbeeld bij
+                                spreuken het geval kan zijn) worden zij opgevat als geneste <gi>group</gi> binnen de
+                                <gi>group</gi> die de tekstverzameling als geheel beschrijft.</p>
+                            <p>Kort gezegd: elke <gi>group</gi> is samengesteld uit een of meer elementen <gi>text</gi>;
+                                en elk element <gi>text</gi> binnen de <gi>group</gi> die de tekstverzameling aanduidt,
+                                bevat weer het element <gi>body</gi>. Natuurlijk kan een <gi>group</gi> ook andere
+                                elementen <gi>group</gi> bevatten, bijvoorbeeld wanneer er sprake is van een een
+                                deelverzameling binnen de tekstverzameling. Uiteindelijk zal een <gi>group</gi> toch
+                                bestaan uit elementen <gi>text</gi>. Die <gi>text</gi> elementen omvatten op hun beurt
+                                dan weer verplicht een element <gi>body</gi>. </p>
+                            <p>De interne geleding van de geëditeerde teksten kan, indien nodig, worden
+                                aangegeven door het element <gi>div</gi>. Dat is het geval bij een tekst die uit
+                                duidelijk te onderscheiden eenheden is opgebouwd.</p>
+                            <p>De structuur van dit deel van de editie ziet er dus als volgt uit:</p>
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+    <teiHeader>...</teiHeader>
+    <text>
+         <group>
+                <text>
+                    <body>
+                    </body>
+                </text>
+         </group>
+    </text>
+                            </egXML>
+                            <p>De tag van het element <gi>text</gi> die
+                                het transcriptiedeel omsluit krijt een <att>xml:id</att> attribuut met als waarde een door de editeur zelf te
+                                bedenken sigle waarmee de editie in het hele document wordt geïdentificeerd.
+                                Ter voorkoming van verwarring bij zoek- en vervangopdrachten tijdens het
+                                werken aan de editie, verdient het aanbeveling om de sigle uit een (korte)
+                                string van hoofdletters te laten bestaan die zo mogelijk niet voorkomt in de
+                                uitgegeven tekst.</p>
+                            <p>Aan elk nevengeschikt of genest element <gi>group</gi> of
+                                <gi>text</gi> wordt ter identificatie een eigen <att>xml:id</att> attribuut toegekend met
+                                een waarde die is samengesteld uit de handschriftsigle en het tekstnummer.
+                                Daarnaast wordt aan het element een <att>n</att> attribuut toegekend met het
+                                tekstnummer zoals het in de editie moet
+                                verschijnen.<egXML xmlns="http://www.tei-c.org/ns/Examples"><group xml:id="SIGLE45" n="45">...</group></egXML>
+                                De waarde van het <att>xml:id</att> attribuut wordt gerelateerd aan de hiërarchische structuur van de 
+                                tekstverzameling. De waarde van het <att>n</att> attribuut volgt in principe de oorspronkelijke 
+                                tekstnummering van het handschrift. Kent het handschrift geen oorspronkelijke 
+                                tekstnummering dan brengt de editeur de waarde van het <att>n</att> attribuut in 
+                                overeenstemming met het <att>xml:id</att> attribuut.</p>
+                            <p>De interne structuur van het <gi>group</gi> element dat de
+                                tekstverzameling omvat is dus (versimpeld weergegeven, maar met <att>xml:id</att> en <att>n</att> attributen) bijvoorbeeld als
+                                volgt ( de sigle VVEVM staat voor
+                                het <q>Van vrouwen ende van minne-handschrift</q>):
+                                <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text xml:id="VVEVM">
+    <group><!-- Editie van de teksten -->
+        <text n="1" xml:id="VVEVM1">
+            <body>
+                <!-- Tekst 1 -->
+            </body>
+        </text>
+        <group n="2" xml:id="VVEVM2" >
+            <text n="2.1" xml:id="VVEVM2.1" >
+                    <body>
+                        <!-- Tekst 2.1 -->
+                    </body>
+                </text>
+                <text n="2.2" xml:id="VVEVM2.2" >
+                    <body>
+                        <!-- Tekst 2.2 -->
+                    </body>
+                </text>
+        </group>
+    </group>
+</text></egXML></p>
+                            <p>Het voorbeeld laat zien, dat wanneer er sprake is van zelfstandige teksten die om een inhoudelijke reden
+                                bijeen lijken te horen (bijvoorbeeld een collectie rijmspreuken), deze teksten kunnen worden samengenomen 
+                                als <gi>group</gi>. Deze <gi>group</gi> bestaat
+                                dan weer uit afzonderlijke <gi>text</gi> elementen.
+                            </p>
+                        <div>
+                        <head>De codering van de fysieke structuur van het handschrift</head>
+                <p>In het editiegedeelte met de transcriptie komen verschillende structuren bij
+                    elkaar: de structuur van de tekstverzameling, de fysieke structuur van de codex
+                    en een XML structuur. Een MVN-editie wil immers niet alleen een tekstcorpus
+                    uitgeven zoals dat is overgeleverd in een bepaalde handschriftelijke bron, maar
+                    ook in de uitgave de relatie van de teksten tot hun fysieke bron tot uitdrukking
+                    laten komen. In verreweg de meeste gevallen zal de hiërarchische structuur van
+                    de tekstverzameling (bestaande uit teksten, die weer uit strofen of paragrafen
+                    bestaan) niet samenvallen met de hiërarchische fysieke structuur van de bron
+                    (bestaande uit katernen, die weer uit dubbel- of enkele bladen zijn
+                    samengesteld, elk met een recto- en versozijde, waarop een of meer kolommen, die
+                    elk weer al dan niet zijn gelinieerd).</p>
+                <p>Nu heeft elk XML-bestand per definitie één hiërarchische structuur die bestaat
+                    uit de markering van een groot geheel waarin kleinere eenheden zijn ingebed. Het
+                    is echter niet mogelijk om in een XML-document twee ongelijke hiërarchische
+                    structuren (hier die van de tekstverzameling en die van de codex) aan te
+                    brengen. Om toch beide structuren in het bestand aanwezig te laten zijn, is er
+                    gekozen voor een oplossing waarbij de structuur van de tekstverzameling op
+                    hiërarchische wijze de structuur van het desbetreffende gedeelte van het
+                    XML-document bepaalt (bijvoorbeeld: het tekstgedeelte van regel x tot regel y is
+                    een strofe). De structuur van de bron wordt weergegeven door middel van
+                    niet-hiërarchische overgangsmarkeringen (bijvoorbeeld: op deze plaats vindt er
+                    een overgang plaats van katern 1 naar katern 2).</p>
+                <p>De verschillende wijzen van coderen zou men kunnen vergelijken met een tolweg
+                    tussen twee bestemmingen. De teksten zijn trajecten tussen twee tolpoorten; de
+                    overgangsmarkeringen zijn de hectometerpaaltjes langs de route.</p>
+                </div>
+                <div>
+                        <head>De afzonderlijke teksten en hun interne structuur</head>
+                        <p>Elke afzonderlijke tekst wordt gecodeerd door middel van het <gi>text</gi>
+                            element. Aan dit element wordt een <att>xml:id</att> attribuut toegevoegd dat is
+                            opgebouwd uit de sigle van het handschrift, gevolgd (zonder spatie) door
+                            het tekstnummer. Tevens wordt een <att>n</att> attribuut toegevoegd met de waarde
+                            van het tekstnummer, zoals het in de editie zichtbaar moet worden.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples"><text xml:id="SIGLE63" n="63">...</text></egXML> 
+                            De hoofdtekst van een tekst
+                            bestaat bij proza uit een of meer <gi>p</gi> (paragraph) elementen en bij
+                            dichtwerk uit <gi>lg</gi> (line group) elementen (strofen). Voor een titel,
+                            opschrift, clauskop of tussenkopje wordt het element <gi>head</gi> gebruikt.
+                            Het element <gi>closer</gi> wordt gebruikt voor onderschriften,
+                            bijschriften, verstellingen, groeten, meta-opmerkingen (zoals
+                            ‘ghecolationneert’) of slotopmerkingen (Amen, Explicit) die geen deel
+                            uitmaken van de hoofdtekst.</p>
+                        <p>Een prozatekst zou er gecodeerd dus, gesimplificeerd, zo uit kunnen zien:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text xml:id="SIGLE63" n="63">
+    <body>
+        <head>Opschrift</head>
+        <p><!-- Tekst van de eerste paragraaf --></p>
+        <p><!-- Tekst van de laatste paragraaf --></p>
+        <closer>Explicit</closer>
+    </body>
+</text></egXML>
+                            Zoals men ziet komt er tussen de openings- en sluittags van het element
+                            <gi>text</gi> een element <gi>body</gi>. Indien gewenst kan een eventueel
+                            aanwezige (hiërarchische) substructuur in de tekst worden gecodeerd door
+                            middel van <gi>div</gi> (division) elementen die dan telkens één of meer
+                            <gi>p</gi> elementen omsluiten. De <gi>div</gi> elementen worden niet genummerd.</p>
+                        <p>Een berijmde tekst van twee strofen zou er zo uit kunnen zien:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text xml:id="SIGLE64" n="64">
+    <body>
+        <head>Opschrift</head>
+        <lg>
+            <l>Tekst van de eerste versregel</l>
+            <l>Tekst van de tweede versregel</l>
+            <l>Tekst van de derde versregel</l>
+            <l>Tekst van de vierde versregel</l>
+        </lg>
+        <lg>
+            <l>Tekst van de vijfde versregel</l>
+            <l>Tekst van de zesde versregel</l>
+            <l>Tekst van de zevende versregel</l>
+            <l>Tekst van de achtste versregel</l>
+        </lg>
+        <closer>Amen</closer>
+    </body>
+</text></egXML>
+                            Bij berijmde teksten worden de afzonderlijke versregels dus binnen een
+                            <gi>lg</gi> (line group) element genest door middel van het <gi>l</gi> (line)
+                            element. Line groups zelf kunnen ook genest voorkomen, anders gezegd:
+                            het is mogelijk dat een line group voorkomt binnen een grotere line
+                            group, bijvoorbeeld in het geval van een toneelstuk waarin een refrein
+                            voorkomt binnen de claus van een personage. Elk <gi>l</gi> element moet deel
+                            uitmaken van een <gi>lg</gi> element. Om elke versregel te identificeerbaar
+                            te maken, wordt aan een <gi>l</gi> element een <att>xml:id</att> attribuut toegevoegd
+                            dat gelijk is aan het text <att>xml:id</att> attribuut, aangevuld met een punt en
+                            een regelnummer. In een <att>n</att> attribuut wordt dit regelnummer nog eens
+                            afzonderlijk gespecificeerd. Bijvoorbeeld:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<text n="62" xml:id="SIGLE62">
+    <body>
+        <lg>
+            <l n="1" xml:id="SIGLE62.1">Tekst versregel 1</l>
+            <l n="2" xml:id="SIGLE62.2">Tekst versregel 2</l>
+            <l n="3" xml:id="SIGLE62.3">Tekst versregel 3</l>
+            <l n="4" xml:id="SIGLE62.4">Tekst versregel 4</l>
+        </lg>
+    </body>
+</text></egXML>
+                        Ook strofen (<gi>lg</gi>) kunnen genummerd worden middels het <att>n</att>-attribuut.</p>
+                    </div>
+                    <div>
+                        <div>
+                        <head>Witregels</head>
+                        <p>Zoals in het bovenstaande voorbeeld bij proza is te zien, worden
+                            witregels met een leeg <gi>lb</gi> (line break) element gemarkeerd, zowel
+                            in proza als in berijmde teksten.</p>
+                    </div>
+                    <div>
+                        <head>Inspringing</head>
+                        <p>Een strofe (line group) waarvan de regels inspringen kan men coderen met
+                            behulp van het <att>rend</att> attribuut met als waarde ‘indent’:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<lg rend="indent">
+    <l n="1" xml:id="SIGLE62.1">Tekst versregel 1</l>
+    <l n="2" xml:id="SIGLE62.2">Tekst versregel 2</l>
+    <l n="3" xml:id="SIGLE62.3">Tekst versregel 3</l>
+    <l n="4" xml:id="SIGLE62.4">Tekst versregel 4</l>
+</lg>                        </egXML>
+                            Als een dergelijke strofe een opschrift heeft dat zich ter rechter- of
+                            linkerzijde van de strofe bevindt, coderen we dit als <gi>head</gi> element
+                            met attribuut <att>place</att> en waarde <val>margin-right</val> of <val>margin-left</val>. Het <gi>head</gi> element
+                            wordt in de transcriptie aangebracht op een plaats die overeenkomt met
+                            de plaats waar het in zich het handschrift bevindt.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<lg rend="indent">
+    <l n="1" xml:id="SIGLE62.1">Tekst versregel 1</l>
+    <head place="margin-left">Bijschrift</head>
+    <l n="2" xml:id="SIGLE62.2">Tekst versregel 2</l>
+    <l n="3" xml:id="SIGLE62.3">Tekst versregel 3</l>
+    <l n="4" xml:id="SIGLE62.4">Tekst versregel 4</l>
+</lg>                        </egXML></p>
+                    </div>
+                    <div>
+                        <head>Codering van de fysieke structuur van de bron</head>
+                        <p>Tot dusverre hebben de coderingen van de teksten uit het handschrift
+                            betrekking op de tekstuele inhoud gehad. Onderdelen van de tekst werden
+                            omsloten door open- en sluittags. Daarmee werd aangegeven dat alle tekst
+                            tussen deze tags tot een specifiek element behoort. </p>
+                        <p>Zoals hiervoor reeds is uiteengezet wordt de fysieke structuur van de
+                            bron op een andere manier gecodeerd, namelijk met milestone-elementen:
+                            lege elementen die geen tekst omvatten, maar die slechts een plaats
+                            markeren. Vier elementen worden gebruikt: <gi>pb</gi>, <gi>lb</gi>, <gi>cb</gi>
+                            en een algemeen element <gi>milestone</gi>. <hi rendition="#r-red">PB: inmiddels bestaat 
+                                ook het <gi>gb</gi>-element (gathering break)</hi>. De drie eerstgenoemde elementen
+                            worden gebruikt voor pagina-, handschriftregel- en kolomovergangen; ze
+                            worden voorzien van een attribuut <att>xml:id</att> ter identificatie van de
+                            handschriftelijke bron waarnaar verwezen wordt, de bladzijde en het
+                            regelnummer. In een <att>n</att> attribuut wordt de waarde weergegeven zoals die
+                            in de editie kan verschijnen.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<lb n="1" xml:id="SIGLEf146v.1"/></egXML>
+                            Dit <gi>lb</gi> element gaat altijd vooraf aan de tekst op de betreffende regel, 
+                            dus bijvoorbeeld een <gi>l</gi> element.</p>
+                        <p>Voor andere overgangen dan die van bladzijde, kolom en handschriftregel
+                            wordt het element <gi>milestone</gi> gebruikt. Dit wordt voorzien van een
+                            attribuut <att>ed</att> (met verwijzing naar de handschriftelijke bron d.m.v. het
+                            handschriftsigle). In het attribuut <att>unit</att>, dat verschillende waarden kan
+                            krijgen, wordt aangegeven welke overgang de milestone markeert. Zo wordt
+                            een katernscheiding aangegeven door de waarde ‘quire’. In een <att>n</att>                             attribuut wordt het nieuwe nummer of de waarde van de milestone
+                            aangegeven. Afhankelijk van de opbouw van handschrift wordt er een
+                            bepaald nummer aan het katern toegekend.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<milestone n="1.2" ed="SIGLE" unit="quire"/></egXML>
+                            Daarbij lijkt het zinvol om binnen een convoluut een onderverdeling in
+                            groepen katernen te onderscheiden. Een milestone voor een katerngroep
+                            wordt gespecificeerd door een <att>unit</att> attribuut met waarde ‘msPart’:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<milestone n="1" ed="SIGLE" unit="msPart"/></egXML>
+                            Bij conventie worden milestone-tags geplaatst voorafgaand aan elementen
+                            waarvan het begin samenvalt met de milestone. Voorbeeld van de codering
+                            van een tekst waarbij tussen versregel 14 en 15 een overgang plaatsvindt
+                            van het eerste naar het tweede katern van een handschrift:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <l xml:id="SIGLE59.14" n="14">versregel 14</l>
+                            <milestone ed="SIGLE" unit="msPart" n="1"/>
+                            <gb xml:id="SIGLEq1.2" n="1.2"/>
+                            <pb xml:id="SIGLEf125r" n="125r"/>
+                            <cb xml:id="SIGLEf125ra" n="a"/>
+                            <lb xml:id="SIGLEf125ra.1" n="1"/>
+                            <l xml:id="SIGLE59.15" n="15"><!-- versregel 15 --></l>
+                        </egXML></p>
+                        <p>Als er naast de digitale editie ook een editie in boekvorm bestaat is het
+                            zinvol om in de digitale editie de plaatsen te markeren waar
+                            paginaovergangen in het boek plaatsvinden. Ook dat gebeurt met behulp
+                            van het lege element <gi>pb</gi>. Ter onderscheiding van het element dat
+                            gebruikt voor voor de handschriftelijke bron krijgt hier het
+                            ‘ed’-atrribuut de waarde ‘MVNx’ (waarbij x staat voor het nummer van de
+                            editie in de MVN-reeks).
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<pb ed="MVNx" n="42"/></egXML></p>
+                        <p>Handenscheiding wordt aangegeven door het lege element <gi>handShift</gi>.
+                            Een daarbij gebruikt attribuut is <att>new</att> (identificeert de nieuwe hand) en
+                            <att>term</att> (hier wordt het schrifttype vermeld). De waarde van het <att>term</att>-attribuut 
+                            is in principe vrij, maar zal in overeenstemming met geldende
+                            paleografische conventies worden toegekend (textualis, cursiva, etc.).
+                            <hi rendition="#r-red">PB: Hebben we <att>term</att> nodig? Bestaat niet in TEI.</hi>
+                            Het attribuut <att>new</att> heeft waarden die overeenkomen met de handensiglen
+                            zoals die in de <gi>teiHeader</gi> worden gedefinieerd.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<handShift new="delta" term="textualis"/></egXML> Het element
+                            <gi>handNote</gi> wordt in de TEI header gebruikt (binnen het <gi>msDesc</gi>
+                            element) om elke unieke hand die door de editeur wordt onderkend te
+                            definiëren. Voor elke hand moet er een afzonderlijk element aanwezig
+                            zijn in de header (zie aldaar).</p>
+                        <p>Het gebruik van milestone-elementen wordt voorbehouden voor de codering
+                            van verschijnselen die betrekking hebben op de constructie van de bron:
+                            katernen, bladen, aflijning, alles wat gedaan is ter voorbereiding van
+                            het eigenlijke beschrijven van de tekstdrager valt hieronder. Voor de
+                            fysieke aspecten en eigenschappen van de tekst, zoals paleografische
+                            eigenschappen, kleur van de inkt, enz. wordt het gebruik van het
+                            milestone element achterwege gelaten.</p>
+                    </div>
+                    <div>
+                        <head>Registers</head>
+                        <p>Anders dan in de gedrukte MVN-delen het geval is, vallen de registers
+                            niet onder het nawerk. Registers worden afzonderlijk gegenereerd. Ten
+                            behoeve van deze registers (opschriften en incipits) worden het eerste
+                            zelfstandig naamwoord, werkwoord of de eerste eigennaam van een
+                            opschrift of beginregel in de geëditeerde tekst gelemmatiseerd. Voor
+                            woorden die geen eigennamen zijn wordt daarbij gebruik gemaakt van het
+                            element <gi>w</gi> met attribuut <att>lemma.</att> De waarde van het attribuut is de
+                            voluit geschreven, genormaliseerde vorm van het woord, zoals het
+                            voorkomt in het Middelnederlandsch Handwoordenboek.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<w lemma="stadhuus">stadt huus</w></egXML>
+                            Persoonsnamen worden gelemmatiseerd met het element <gi>name</gi>, het
+                            attribuut <att>type</att> met waarde ‘person’ en een attribuut <att>reg</att> dat als waarde
+                            de genormaliseerde vorm van de naam heeft, waaronder zij dient te worden
+                            opgenomen in de registers.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Sente <name type="person" reg="Bernardus">bernaert</name></egXML></p>
+                        <p>Alle opschriften, titels en incipits worden voorzien van een taalcode, 
+                            zodat afzonderlijke lijsten per taal kunnen worden gegenereerd.</p>
+                        <p>Om bij het genereren van een woordconcordantie te voorkomen dat bij
+                            afgebroken woorden die over twee of meer regels zijn geschreven, de
+                            woorddelen niet als afzonderlijke woorden door het programma worden
+                            opgevat, worden afbrekingsstreepjes gecodeerd door een <gi>c</gi> element
+                            met attribuut <att>type</att> en waarde ‘shy’. Voorbeeld:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>datmen siet den li<c type="shy">-</c><lb/>chame</l></egXML>
+                            </p>
+                        <p><hi rendition="#r-red">PB: toegevoegd: </hi>
+                            In het geval dat de kopiist géén afbrekingsstreepje zou hebben geschreven,
+                            zou dit voorbeeld er zo uitzien:
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>datmen siet den li<lb/>chame</l></egXML>
+                            Uit het ontbreken van 'whitespace' (i.e.: spaties, tabs, nieuwe regels) 
+                            volgt hier dat 'li' en 'chame' hier een enkel woord vormen. In principe kan 
+                            zo'n woordafbreking over regels, kolommen en pagina's heengaan, zoals hier:  
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>datmen siet den li<pb/><cb/><lb/>chame</l></egXML>
+                            <hi rendition="#r-red">PB: helaas toont de weergave in html van dit voorbeeld een aantal
+                            regelovergangen. In de XML staan die er niet! </hi>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <head>De codering van verwijzingen</head>
+                    <p><hi rendition="#r-red">PB: Bij de verwijzingen gaat het ws. grotendeels om de inleidende teksten, 
+                    is dus voor transcriptie niet direct relevant.</hi> Voor we bezien hoe de diverse 
+                        onderdelen waaruit deze structuur is opgebouwd,
+                        moeten worden vormgegeven en aan welke voorwaarden ze moeten voldoen, nog
+                        een enkel woord over een aspect van de editie die in alle onderdelen aan de
+                        orde kan zijn: de manier van verwijzen en linken. </p>
+                    <p>Bij een verwijzing kan het gaan om een verwijzing naar een plaats binnen het
+                        document of naar een plaats buiten het document. Voor beide gevallen wordt
+                        één manier van coderen gebruikt, namelijk het <gi>ref</gi> element. Met dit
+                        element wordt een tekstdeel gemarkeerd vanwaaruit wordt verwezen naar één of
+                        meer andere plaatsen. Dat kunnen plaatsen in hetzelfde document zijn, maar
+                        bijvoorbeeld ook plaatsen die zich op het internet bevinden. De plaats
+                        waarnaar wordt verwezen wordt aangeduid met een <att>target</att> attribuut. Binnen
+                        hetzelfde document wordt dit target aangeduid door middel van een op die
+                        plaats aanwezige xml:id. Deze identificator wordt in het <att>target</att> attribuut
+                        voorafgegaan door een #-teken. Als binnen hetzelfde document wordt verwezen
+                        kan dat er als volgt uitzien:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        Een ten dele uitgewist eigendomskenmerk vinden we op <ref target="#SIGLEf102v">f.102v.</ref>.</egXML>
+                        De waarde van het target, in dit geval #SIGLEf102v, is dan toegekend door
+                        middel van een xml:id aan een specifieke plaats in het document, in dit
+                        geval is dat een leeg <gi>pb</gi> (page break) element waarmee het begin van f.
+                        102v is gemarkeerd. Bij een externe verwijzing hoeft er geen #-teken te
+                        worden gebruikt. In onderstaand voorbeeld wordt verwezen naar een afbeelding
+                        op het internet.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Een <ref target="#http://www.huygensinstituut.knaw/mvn/SIGLEf102vafb">foto</ref> van het ten dele uitgewiste eigendomskenmerk vinden we op f.102v.</egXML></p>
+                </div>
+                <div>
+                    <head>De plaatsing van verwijzingen naar illustraties en niet-textuele grafiek</head>
+                    <p>Als er op een bepaalde plaats in het handschrift een illustratie of een
+                        grafisch, niet-textueel verschijnsel voorkomt (zoals bijvoorbeeld een
+                        notenbalk), wordt dat ter plaatse aangegeven door een <gi>figure</gi> element
+                        met een attribuut <att>xml:id</att> dat naar de bedoelde afbeelding verwijst.
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <figure xml:id="GBHSfig101ruitsnede"><graphic url="..."/><head>Bijschrift</head></figure></egXML>
+                        Binnen het <gi>figure</gi> element zijn ook de verwijzing naar de plaats waar de
+                        afbeelding staat (<gi>graphic</gi> element met <att>url</att> attribuut) en het element
+                        <gi>head</gi> voor het fotobijschrift genest.</p>
+                </div>
+                <div>
+                    <head>Muzieknotatie</head>
+                    <p>Muzieknotatie wordt grafisch weergegeven in een afzonderlijk bestand (per
+                        geheel van samenhangende notenbalken wordt één afzonderlijk bestand
+                        gebruikt), waarnaar wordt verwezen door een leeg <gi>graphic</gi> element. Een
+                        <gi>graphic</gi> element staat dan binnen een <gi>figure</gi> element op de lokatie
+                        waar de notatie daadwerkelijk voorkomt. Een <gi>graphic</gi> element is voorzien
+                        van een <att>url</att> attribuut met als waarde de lokatie waar de afbeelding zich
+                        bevindt.</p>
+                </div>
+              </div>
+            </div>
+            <div xml:id="RL6">
+                <head>Mark-up van de transcriptie</head>
+                <p>De basis van de transcriptie voor zover deze de structuur van de
+                    tekstverzameling, de structuur van de afzonderlijke teksten en de fysieke
+                    tructuur van het handschrift betreft, werd behandeld in <ref target="#RL2"
+                        >hoofdstuk 2</ref> en <ref target="#RL3">hoofdstuk 3</ref>. Uitgangspunt is
+                    dat de teksten uit de bron letterlijk worden weergegeven in het XML-document,
+                    volgens dezelfde richtlijnen die gelden voor de diplomatische edities in
+                    boekvorm. In een aantal gevallen echter is het noodzakelijk op een andere wijze
+                    te werk te gaan. Dat geldt in het bijzonder voor verschijnselen die tot dusverre
+                    noodgedwongen (door de beperking van het medium van het gedrukte boek) op
+                    bijzondere wijze grafisch werden weergegeven of in annotatie werden beschreven.
+                    Deze gevallen kunnen worden ingedeeld in de onderstaande categorieën.</p>
+                <list>
+                    <item>tekstwijziging en correctie</item>
+                    <item>tekstbeschadiging en tekstverlies</item>
+                    <item>onzekere lezingen</item>
+                    <item>de codering van afkortingen en de oplossing van afgekorte tekst</item>
+                    <item>niet-linguïstische verschijnselen in de tekst, bijzondere grafische
+                        tekstweergave in de bron (onderstreepte tekst, dagletters in kalenders,
+                        vorkteksten, marginale tekst (geschreven buiten de tekstkolommen))</item>
+                    <item>opmaak- en katernopbouw-gerelateerde tekst (representanten, reclamen,
+                        custoden)</item>
+                    <item>bijzondere tekens (initialen, paragraaftekens, afbreektekens)</item>
+                    <item>afbeeldingen, figuren en tabellen</item>
+                    <item>paleografisch commentaar</item>
+                </list>
+                <div>
+                    <head>Coderen of annoteren?</head>
+                    <p><hi rendition="#r-red">PB: Voor de meeste verschijnselen die in de hier volgende secties besproken worden, 
+                        geven we een manier om het betreffende verschijnsel in TEI gedetailleerd te coderen.
+                        We beseffen echter dat gedetailleerde codering in strijd kan zijn met het doel 
+                        van de reeks: snelle publicatie van handschriften. Het is daarom ook mogelijk om
+                        deze verschijnselen op de traditionele wijze te behandelen in annotatie. Daarbij 
+                        wordt gebruik gemaakt van het <gi>note</gi>-element. We onderscheiden vooralsnog 
+                        de volgende typen: <val>tc</val> (tekstkritisch) en <val>pc</val> 
+                        (paleografisch-codicologisch).</hi>   
+                    </p>
+                    <p><hi rendition="#r-red">Om het mogelijk te maken dat de gebruiker switcht tussen 
+                        een gestructureerde weergave en een weergave d.m.v. annotaties 
+                        kan ook zowel een annotatie als een gestructureerde weergave van een 
+                        verschijnsel worden gegeven. In dat geval wordt de noot ingebed in de 
+                        structuurcodering en krijgt als <att>rend</att>-attribuut <val>alternative</val>. Bijvoorbeeld:</hi></p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <del type="strikethrough" rend="diagonal" hand="A">boec<note rend="alternative" type="tc"><mentioned>boec</mentioned> is doorgehaald</note></del></egXML>
+                    <p>In de noot uit het handschrift aangehaalde tekst wordt ingebed in het <gi>mentioned</gi>-element.</p>
+                </div>
+                <div>
+                    <head>Tekstwijziging en correctie</head>
+                    <p>De tekst zoals hij door een kopiist in eerste instantie is neergeschreven kan
+                        door hemzelf of anderen zijn gewijzigd. Daarbij kan het gaan om weglating
+                        van tekst zonder dat daar nieuwe tekst voor in de plaats komt (door middel
+                        van doorhalen, expungeren of uitraderen), om toevoeging van tekst zonder dat
+                        daarbij eerder geschreven tekst wordt vervangen (bijschrijven, al dan niet
+                        met gebruikmaking van invoegtekens), om vervanging van eerder geschreven
+                        tekst door nieuwe tekst (door middel van doorhalen of uitraderen en
+                        bijschrijven, of overschrijven) en om wijzigingen in de volgorde van reeds
+                        geschreven tekst. Tenslotte kan het zo zijn dat een correctie in tweede
+                        instantie toch weer wordt verworpen.</p>
+                    <p>In al deze gevallen kan het gaan om de vervanging van slechte door betere
+                        tekst, of van goede tekst door tekst die niet (vanuit een linguïstisch
+                        oogpunt) beter of slechter is, maar eenvoudigweg anders. Over de kwaliteit
+                        van de tekstwijziging doet de editeur van de diplomatische uitgave geen
+                        uitspraak; deze maakt dan ook geen deel uit van de codering.</p>
+                    <p>Voor alle genoemde gevallen is er speciale codering beschikbaar, die hier
+                        wordt toegelicht. </p>
+                    <div>
+                        <head>Verwijdering van tekst zonder dat er nieuwe tekst voor in de plaats
+                            komt</head>
+                        <p>Het element waarmee verwijderde tekst van beperkte omvang wordt
+                            gemarkeerd is het <gi>del</gi> element. Dit element kan de attributen <att>type</att>                             voor het soort verwijdering en <att>hand</att> voor de corrector bevatten. (Het
+                            attribuut <att>status</att> lijkt in de MVN-reeks niet van toepassing). Toegestane
+                            waarden voor het <att>type</att> attribuut zijn: strikethrough (doorhaling),
+                            erasure (rasuur), expunction (expungering), subpunction (subpungering),
+                            reagent (reagens), wash (afwassen). Daarnaast wordt in de TEI Guidelines
+                            ook het <att>rend</att> attribuut gebruikt, waarmee de realisering van de
+                            correctie kan worden vermeld. Het <att>type</att> attribuut fungeert dus op een
+                            iets abstracter niveau dan het <att>rend</att> atribuut. Het <att>type</att> attribuut
+                            gebruiken we voor de wijze van verwijdering, het <att>rend</att> atribuut voor de
+                            uitvoering daarvan:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Cvcurbita dat sijn <del type="strikethrough" rend="diagonal" hand="A">b</del>quoerden ende</egXML>
+                            Mogelijke waarden voor het <att>rend</att> attribuut zijn: horizontal, vertical,
+                            diagonal.</p>
+                        <p>Het coderen van weglatingen van langere passages waarin bepaalde
+                            tekststructurenrende grenzen (strofegrenzen, paragraafgrenzen) vallen,
+                            zou, indien het <gi>del</gi> element gebruikt zou worden, conflicteren met
+                            het verbod op overlappende codering. <hi rendition="#r-red">PB: 
+                            S.v.p. geen <gi>delSpan</gi> gebruiken zonder voorafgaand overleg</hi> 
+                            Hiervoor is een oplossing gevonden
+                            in de codering met behulp van een element <gi>delSpan</gi>, dat het begin
+                            van een weggelaten passage markeert en waarin met het attribuut <att>to</att> 
+                            wordt vooruitgewezen naar een bepaalde plaats waar de weglating eindigt.
+                            Die plaats wordt gemarkeerd door een leeg <gi>anchor</gi> element of een
+                            ander leeg element dat voorzien is van een xml:id, dat tevens wordt
+                            opgenomen als waarde van het <att>spanTo</att> attribuut. Ook bij <gi>delSpan</gi> kan
+                            men met de attributen <att>type</att> en <att>rend</att> het soort markering van de
+                            weglating en de realisering ervan preciseren, terwijl met het attribuut
+                            <att>hand</att> de corrector wordt geïdentificeerd.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<lg>
+    <l n="1">Een ionghelinc . vul der <delSpan type="strikethrough" rend="horizontal" hand="delta" spanTo="GHHSIII15.2anchor1"/>weerelt luste</l>
+    <l n="2">Zochte eens<anchor xml:id="GHHSIII15.2anchor1"/> in wandelinghen ruste</l>
+    <l n="3">So verre hi hem te gane bewant</l>
+    <l n="4">Dat hi eenen houden hermite vant</l>
+ </lg></egXML></p>
+                        <p>Als weggelaten tekst geheel onleesbaar is dan kan hij niet
+                            getranscribeerd worden. De passage in de transcriptie wordt dan
+                            gemarkeerd met het element <gi>gap</gi> binnen een <gi>del</gi> element. Met het
+                            attribuut <att>reason</att> kan middels de waarden 'illegible' of 'deletion'
+                            worden aangegeven waarom de weggelaten tekst onleesbaar is. Als
+                            gedeelten van de weggelaten tekst toch nog gedeeltelijk leesbaar zijn,
+                            dan wordt het <gi>unclear</gi> element gebruikt om passages aan te duiden
+                            waarvan de lezing niet geheel zeker is.</p>
+                    </div>
+                    <div>
+                        <head>Toevoeging van tekst zonder dat daarbij eerder geschreven tekst wordt
+                            vervangen (bijschrijving al dan niet met gebruikmaking van invoegtekens)</head>
+                        <p>Tekst die is toegevoegd, zonder dat ze voor andere tekst in de plaats
+                            komt wordt op vergelijkbare wijze gecodeerd als weggelaten tekst.
+                            Hiervoor wordt het <gi>add</gi> element gebruikt. Daarbij worden de
+                            attributen <att>place</att> en <att>hand</att> gebruikt en, indien van toepassing, het
+                            attribuut <att>rend</att>, waarmee het gebruik van een invoegteken kan worden
+                            gespecificeerd. Het attribuut <att>hand</att> kan alle waarden aannemen die worden
+                            genoemd in het element <gi>handNotes</gi> in de TEIheader. Het <att>rend</att>-attribuut 
+                            kan twee waarden aannemen: ofwel er is (op wat voor wijze dan)
+                            ook een aanduiding op welke plaats de toevoeging moet worden ingevoegd,
+                            ofwel zo’n aanduiding ontbreekt. In het eerste geval neemt het <att>rend</att>-attribuut 
+                            de waarde ‘pointer’ aan; in het tweede geval ‘nopointer’.</p>
+                        <p>Met het attribuut <att>place</att> wordt aangegeven waar de bijgeschreven tekst te
+                            vinden is. Daarvoor kunnen de volgende waarden worden gebruikt,
+                            overeenkomstig de situatie in de bron:</p>
+                        <list>
+                            <item>inline (tekst is bijgeschreven op een opengelaten plaats)</item>
+                            <item>supralinear (bijgeschreven boven de regel)</item>
+                            <item>infralinear (bijgeschreven onder de regel)</item>
+                            <item>left (links van een woord)</item>
+                            <item>right (rechts van een woord)</item>
+                            <item>margin-left (bijgeschreven in de linkermarge van de kolom)</item>
+                            <item>margin-right (bijgeschreven in de rechtermarge van de kolom)</item>
+                            <item>margin-top (bijgeschreven in de bovenmarge)</item>
+                            <item>margin-bottom (bijgeschreven onderaan de bladzijde)</item>
+                            <item>opposite (bijgeschreven op de tegenoverliggende bladzijde)</item>
+                            <item>verso (bijgeschreven aan de ommezijde)</item>
+                            <item>mixed (bijgeschreven op verschillende plaatsen)</item>
+                        </list>
+                        <p>Langere toevoegingen aan een tekst kunnen worden gecodeerd met het
+                            <gi>addSpan</gi> element, dat op dezelfde wijze wordt gehanteerd als het
+                            <gi>delSpan</gi> element. 
+                            <hi rendition="#r-red">PB: <gi>addSpan</gi> alleen na overleg gebruiken.</hi> 
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">[VOORBEELDEN]</egXML></p>
+                    </div>
+                    <div>
+                        <head> Vervanging van eerder geschreven tekst door nieuwe tekst (door middel
+                            van doorhalen of uitraderen en bijschrijving, of overheenschrijven)</head>
+                        <p>Een veelvoorkomende manier van corrigeren is het verwijderen van een fout
+                            en het schrijven van de juiste tekst. Dit kan op verschillende manieren
+                            worden uitgevoerd: het ene woord of de ene letter wordt over een ander
+                            heen geschreven; een woord of letter kan worden doorgehaald en het goede
+                            woord of de letter kan erboven, eronder, ernaast of in de marge worden
+                            geschreven; dit alles kan het werk van een hand zijn of van
+                            verschillende handen, actief op verschillende tijdstippen. Ook kan het
+                            zijn dat de volgorde van het aanbrengen van correcties, of zelfs de
+                            uiteindelijke lezing onduidelijk is.</p>
+                        <p>In zulke gevallen gaan we als volgt te werk: eerst coderen we de tekst
+                            die is weggelaten met het <gi>del</gi> element en vervolgens coderen we de
+                            tekst die voor de weggelaten lettertekens in de plaats is gekomen met
+                            het <gi>add</gi> element.</p>
+                        <p>Hiermee is in de codering nog niet expliciet aangegeven dat de
+                            toegevoegde tekst een correctie is van de weggelaten tekst. Dat kan
+                            worden verholpen door gebruikmaking van het <gi>subst</gi> element
+                            (substitution). Zo wordt aangegeven dat de verwijdering en de
+                            toevoegingen deel uitmaken van hetzelfde correctieproces.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>Dat ghi hem <subst><del>heden</del><add>nemmermeer</add></subst>latet gaen.</l></egXML>
+                            Wanneer de correctie plaatsvindt in een woord waarin zich een afkorting
+                            bevindt, wordt het <gi>subst</gi> element genest binnen het <gi>choice</gi>
+                            element en moet de correctie zowel binnen het <gi>abbr</gi> element als het
+                            <gi>expan</gi> element worden gecodeerd.</p>
+                        <p>Als het verwijderde woord of de letters onleesbaar zijn (bijvoorbeeld
+                            door rasuur) wordt dit weeregegeven door het lege element <gi>gap</gi>.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<del type="erasure"><gap extent="5" unit="characters"/></del></egXML></p>
+                    </div>
+                    <div>
+                        <head>Open varianten</head>
+                        <p>Als een corrector letters of woorden heeft bijgeschreven die lijken te
+                            fungeren als correctie op reeds geschreven tekst, zonder dat daarbij de
+                            eerst geschreven tekst is doorgehaald, hebben we te maken met open
+                            varianten. Het is in dat geval de vraag welk van de twee woorden
+                            beschouwd moet worden als behorend tot de hoofdtekst. Als in de
+                            Richtlijnen voor de diplomatische delen in boekvorm, wordt de op de
+                            regel geschreven variant opgenomen in de hoofdtekst, zonder verdere
+                            markering. De passage waarvoor twee alternatieven bestaan wordt
+                            gecodeerd met behulp van het <gi>choice</gi> element. Het tekstgedeelte in
+                            dat hoofdtekst staat wordt vervolgens gecodeerd met het element
+                            <gi>seg</gi>, het bijgeschreven alternatief met <gi>add</gi>.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l>dat ghi hem <choice><seg>heden</seg><add>nemmermeer</add></choice> laten sal</l></egXML>
+                        <hi rendition="#r-red">PB: aangepast</hi></p>
+                    </div>
+                    <div>
+                        <head>Herstel van correcties (door de kopiist)</head>
+                        <p>Herstel van een correctie kan worden aangeven door het element
+                            <gi>restore</gi>. Het <att>hand</att> attribuut wordt gebruikt om de kopiist te
+                            identificeren die verantwoordelijk is voor het herstel en het <att>type</att>-attrubuut 
+                            kan worden gebruikt om het soort correctie dat wordt hersteld
+                            te verduidelijken. Omdat we voor een doorhaling van een toegevoegde
+                            tekst (gecodeerd met <gi>add</gi>) het <gi>del</gi> element kunnen gebruiken,
+                            zal het <gi>restore</gi> element alleen gebruikt worden voor het herstel van
+                            een verwijderde tekst (gecodeerd met <gi>del</gi>).</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Tekstbeschadiging en tekstverlies</head>
+                    <p>Als een deel van de getranscribeerde tekst volstrekt onleesbaar is en
+                        daardoor niet in de transcriptie kan worden weergegeven, kan dit deel worden
+                        gemarkeerd door het lege element <gi>gap</gi>. Het attribuut <att>reason</att> kan met de
+                        waarden ‘illegible’ of ‘missing’ dan de reden van de omissie aangeven.
+                        Indien een bekende hand verantwoordelijk is voor de onleesbaarheid kan deze
+                        met het attribuut <att>hand</att> worden aangeduid. De attributen <att>agent</att> 
+                        en <att>extent</att> dienen ervoor om resp. de wijze waarop de tekst onleesbaar is gemaakt, en de
+                        omvang van het onleesbare tekstdeel te benoemen. De omvang van het niet
+                        getranscribeerde deel wordt aangegeven in een geschat aantal 'letters', of,
+                        indien het om een groter gedeelte gaat, in millimeters.</p>
+                    <p>Als de beschadigde tekst voor een deel nog wel leesbaar is, worden de
+                        volgende elementen gebruikt: <gi>damage</gi> voor het aanduiden van een passage
+                        waar de tekst beschadigd is; en <gi>unclear</gi> voor woorden, groepen woorden
+                        of passages die door de beschadiging niet meer met volledige zekerheid
+                        kunnen worden getranscribeerd.</p>
+                    <p>Bij het <gi>damage</gi> element kunnen de attributen <att>agent</att>, <att>hand</att>, <att>degree</att> en
+                        <att>extent</att> gebruikt worden. Het gebruik van de drie eerstgenoemde spreekt voor
+                        zichzelf, bij <att>degree</att> hebben we de keuze tussen de waarden slight, moderate
+                        en serious.</p>
+                    <p>Wanneer de omvang van de beschadiging tekststructurerende grenzen
+                        overschrijdt en de codering daardoor in een situatie van potentiële overlap
+                        terecht zou komen, moet ervoor gekozen worden het <gi>damage</gi> element een
+                        leeg element te maken. Het <att>extent</att>-atribuut geeft dan de omvang aan van het
+                        gebied dat beschadigd is.</p>
+                    <p>Tekstverlies doordat een bladrand is afgesneden wordt dan zo gecodeerd:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<damage agent="pagecut"><gap/></damage></egXML></p>
+                    <p>Zoals we reeds eerder zagen wordt het <gi>unclear</gi> element gebruikt in
+                        gevallen dat tekst niet met zekerheid te transcriberen is, omdat het deels
+                        onleesbaar is. De attributen <att>reason</att>, <att>hand</att> en <att>agent</att> geven resp. aan waarom
+                        het tekstdeel moeilijk leesbaar is, welke hand eventueel verantwoordelijk is
+                        voor het onleesbaar maken en, ingeval van beschadiging, wat, indien bekend
+                        of reconstrueerbaar, de oorzaak van de beschadiging is.</p>
+                    <p>Mogelijke waarden voor het attribuut <att>reason</att> zijn: <val>damage</val> en <val>illegible</val>.
+                        De laatstgenoemde waarde kan bijvoorbeeld gebruikt worden als een in de vouw
+                        verdwenen letter of woord ternauwernood zichtbaar is door een strakke
+                        binding van het handschrift.</p>
+                    <p>Waar het beschadigde tekstdeel geen tekststructurende coderingsgrenzen kent
+                        kan een beschadiging als volgt worden gecodeerd:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<damage extent="whole leaf" agent="rubbing"> ... </damage></egXML></p>
+                    <p>Zijn er wel tekststructurerende grenzen, dan is het mogelijk om de
+                        beschadigde stukken in logische partes op te spitsen, waarbij het
+                        <gi>damage</gi> element een leeg element moet worden gemaakt:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<p>
+    <pb n="5r"/>
+    <damage agent="rubbing" extent="whole leaf"/>
+</p>
+<p>
+	<damage agent="rubbing" extent="whole leaf"/>
+	<pb n="5v"/>
+</p></egXML></p>
+                    <p>Stel dat een tekst wel beschadigd is, maar desondanks goed leesbaar. Deze
+                        tekst wordt dan als volgt getranscribeerd:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Daer hij den tempel <damage>o</damage>f hadde verloren</egXML></p>
+                    <p>Als daarentegen door beschadiging de lezing onzeker wordt, dan kan als volgt
+                        worden gecodeerd:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Daer hij den tempel <unclear reason="damage">o</unclear>f hadde verloren</egXML></p>
+                    <p>Wanneer het nodig is iets meer te zeggen over de aard van de beschadiging dan
+                        zou de codering er uit komen te zien als een <gi>unclear</gi> element dat wordt
+                        genest binnen een <gi>damage</gi> element:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Daer hij den tempel <damage agent="rubbing"><unclear>o</unclear></damage>f hadde verloren</egXML></p>
+                    <p> Mocht de letter in het geheel niet meer leesbaar zijn, dan wordt het lege
+                        <gi>gap</gi> element gebruikt:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+Daer hij den tempel <gap reason="illegible" agent="rubbing" extent="1"/>f hadde verloren</egXML></p>
+                    <p>Het is mogelijk dat een passage die voor de editeur in het handschrift niet
+                        meer leesbaar is, dat nog wel was voor een editeur uit vroeger tijd,
+                        bijvoorbeeld doordat deze een reagens gebruikte waardoor de tekst
+                        kortstondig leesbaar werd, voordat door de werking van het middel de
+                        zwartkleuring intrad. In die gevallen kan een editeur de lezing van zijn
+                        voorganger geven, onder diens verantwoordelijkheid. Voor de codering van de
+                        oudere lezing tekst kan het element <gi>supplied</gi> worden gebruikt. Met het
+                        atribuut <att>source</att> wordt dan de verantwoordelijke editeur benoemd.</p>
+                    <p>Het <gi>supplied</gi> element kan het best worden genest binnen een <gi>damage</gi>-
+                        of een <gi>gap</gi>-element, waarmee de situatie in het handschrift precies kan
+                        worden beschreven. Het <gi>gap</gi> element is bijvoorbeeld aan de orde als er
+                        in een handschrift werkelijk beschreven materiaal ontbreekt (een hoek van
+                        een blad, een compleet blad, e.d.) dat ooit wel aanwezig was.</p>
+                    
+                    <div><head>Voorbeelden van codering van onvolmaakt overgeleverde
+                            tekst</head>
+                        <p>In de TEI Guidelines wordt geconstateerd dat het gebruik
+                            van de elementen <gi>gap</gi>, <gi>damage</gi>, <gi>unclear</gi>, <gi>supplied</gi> en
+                            <gi>del</gi> dikwijls met elkaar samenhangt. Welk element van met name de
+                            eerste vier genoemde men kiest, is voornamelijk afhankelijk van de mate
+                            waarin een beschading of ingreep in de tekst de leesbaarheid heeft
+                            beïnvloed. De volgende aanwijzingen voor de toepassing van deze
+                            elementen, waarvan sommigen genest kunnen worden, zijn hierop
+                        gebaseerd.</p>
+                            <p>Een tekst is opzettelijk beschadigd: Hiervoor gebruiken we het
+                                <gi>del</gi> of het <gi>delSpan</gi> element.</p>
+                            <p>Een tekst is onopzettelijk beschadigd: Diervoor gebruiken we het
+                                <gi>damage</gi> element. Als in een handschrift met reagentia is
+                                geprobeerd de tekst leesbaarder te maken beschouwen dit als een
+                                geval van onopzettelijke beschadiging.</p>
+                            <p>De staat van de getranscribeerde tekst wordt aangegeven door de
+                                elementen <gi>gap</gi>, <gi>unclear</gi> en <gi>supplied</gi>:</p>
+                            <list>
+                                <item>gap: de tekst is afwezig;</item>
+                                <item>unclear: tekst is twijfelachtig want moeilijk te lezen;</item>
+                                <item>supplied: tekst is van een eerdere editeur. Wanneer een tekst
+                                    door reagentia onleesbaar is geworden kan dit element worden
+                                    ingezet. De eerder editeur heeft, indien hij degene is geweest
+                                    die de reagentia heeft gebruikt, naar alle waarschijnlijkheid de
+                                    tekst nog goed kunnen lezen.</item>
+                            </list>
+                            <p><gi>gap</gi> en <gi>supplied</gi> komen dus alleen voor in combinatie met
+                                <gi>del</gi> of <gi>damage</gi>. Alleen <gi>unclear</gi> kan ook zonder <gi>del</gi>
+                                of <gi>damage</gi> voorkomen, namelijk als een tekst gewoon slecht
+                                leesbaar is.</p>
+                            <p>Bij al deze elementen moeten toepasselijke attributen worden gebruikt
+                                om de oorzaak van en het soort beschadiging te documenteren en de
+                                mate van zekerheid van de transcriptie weer te geven.</p>
+                    </div>
+                </div>
+                <div>
+                    <head>Onzekere lezingen</head>
+                    <p>Als er onzekerheid bestaat omtrent een lezing die niet kan worden
+                        toegeschreven aan al dan niet opzettelijke beschadiging, maar die een andere
+                        oorzaak heeft, zoals slordigheid of haastig schrijven van de kopiist,
+                        dichtlopen van letters tijdens het schrijfproces, enz., dan moet bij de
+                        codering het <gi>unclear</gi> element worden gebruikt. Voor alle andere gevallen
+                        zie paragraaf 5.2.
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+D<unclear>e</unclear>s gauen reinouts sone</egXML></p>
+                </div>
+                <div>
+                    <head>De codering van afkortingen en de oplossing van afgekorte tekst</head>
+                    <p>Het coderen van afkortingen vormt een probleem waarover veel discussie
+                        bestaat en dat moeilijk tot een bevredigende oplossing komt. De middeleeuwse
+                        praktijk van afkorten is sterk regionaal bepaald en in de loop van eeuwen
+                        gevormd door adaptaties van de tradities in het afkorten van Latijnse
+                        woorden. Hierdoor is er een verscheidenheid aan systemen ontstaan die het
+                        bijzonder moeilijk maakt deze op een logische grondslag te analyseren. Het
+                        coderen van afkortingen kan door de polyvalentie van de meeste
+                        afkortingstekens nooit voldoende zijn om ‘automatisch’ de juiste
+                        oplossingen, bijvoorbeeld via een stylesheet, te genereren. Dat betekent
+                        dat, wil de codering brongetrouw zijn, zowel de afkorting zelf als de
+                        oplossing ervan gecodeerd moeten worden. De werkwijze die in de gedrukte
+                        delen van de MVN-reeks werd gehanteerd, namelijk: weergave van de opgeloste
+                        vormen, met markering van de onzekere letters (inclusief de letters die in
+                        de afkorting zelf voorkomen en dus strikt genomen niet onzeker zijn!) door
+                        middel van cursivering, heeft evidente beperkingen. Zo is het, om een
+                        voorbeeld te geven, uit de tekst van een gedrukte MVN-editie niet mogelijk
+                        op te maken hoe het woord ‘persemen’ in het handschrift is geschreven: als
+                        ‘p̅semen’ of als ‘p’semen’. Zo is het evenmin mogelijk om inzicht te krijgen
+                        in de frequentie van het gebruik van afkortingen, of om specifiek, wellicht
+                        karakteristiek gebruik van afkortingen inzichtelijk te maken, om op
+                        eenvoudige wijze tekensystemen van verschillende kopiisten met elkaar te
+                        vergelijken, editeursbeslissingen ten aanzien van oplossingen met elkaar te
+                        vergelijken, enzovoort.</p>
+                    <p>De digitale editie biedt de mogelijkheid om alle afkortingen in een
+                        handschrift en hun uitgeschreven vormen te coderen, zodat de gebruiker van
+                        de editie naar believen zoekacties kan verrichten binnen een cumulerend
+                        corpus afkortingen. Het zou hier te ver voeren de ingewikkelde problematiek
+                        van het systematiseren en coderen van afkortingen te bespreken. De TEI
+                        Guidelines bieden verschillende mogelijkheden om afkortingen te coderen. </p>
+                    <p><hi rendition="#r-red">PB: Dit wordt een beetje anders: een afkorting mag volgens het 
+                        hierna gegeven mechanisme met <gi>choice</gi> worden uitgeschreven, maar 
+                        het is ook toegestaan alleen de opgeloste letters, die we traditioneel 
+                        cursiveren, te coderen als <gi>ex</gi> (editorial expansion). Dit hangt af van 
+                        de prioriteiten van de editeurs en de omvang van het handschrift.</hi> 
+                        Een woord waarin één of meer afkortingen voorkomt, wordt op twee manieren
+                        gecodeerd: in de vorm waarin het door de kopiist is geschreven en in de door
+                        de editeur opgeloste vorm. Dat kan binnen het <gi>choice</gi> element, dat het
+                        mogelijk maakt twee alternatieve lezingen te geven voor een tekstplaats. De
+                        verkorte vorm wordt gecodeerd met het <gi>abbr</gi> element, het afkortingsteken
+                        met een leeg <gi>g</gi> element (glyph), en de opgeloste vorm komt binnen het
+                        <gi>expan</gi> element te vallen. Bij het <gi>g</gi> element is natuurlijk een
+                        verwijzing nodig naar het bedoelde teken. Daarvoor gebruiken we het <att>ref</att>-attribuut. 
+                        In het geval van een nasaalstreep wordt dat:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            <g ref="#bar"/>
+                        </egXML> In het bestand charDecl.xml zijn deze
+                        abbreviatuurtekens gedefinieerd. Een verwijzing naar dit externe bestand is
+                        standaard opgenomen in het MVN-framework.</p>
+                    <p>De codering van de afkorting voor ‘ende’ ziet er zo uit:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<choice><abbr>en<g ref="#bar"/></abbr><expan>ende</expan></choice></egXML>
+                        en die van ‘lren’ (lettren), met nasaalstreep boven de e, zo:
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<choice><abbr>lre<g ref="#bar"/>n</abbr><expan>lettren</expan></choice></egXML>
+                        Merk op dat de code voor een teken dat boven of door een letter moet worden
+                        weergegeven, zoals bijvoorbeeld de nasaalstreep, verschijnt na dat teken. De
+                        afkortingstekens zelf kunnen ook worden weergegeven door middel van tekens
+                        met vaste Unicode Code-points, die gemakkelijk kunnen worden aangeklikt op
+                        de Character Map die binnen oXygen kan worden gebruikt. (Het ligt in de
+                        bedoeling om in de toekomst een speciale selectie van veelgebruikte
+                        afkortingstekens als het ware ‘klaar te leggen’ in een gecustomisede
+                        MVN-character map.)</p>
+                    <p><hi rendition="#r-red">PB: In de alternativeve codering zien deze voorbeelden er zo uit:</hi>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                            en<ex>de</ex> 
+                            l<ex>ett</ex>re<ex>n</ex> 
+                        </egXML>
+                    </p>
+                    <p>Recentelijk is Unicode uitgebreid met tal van tekens die voor de mediëvist
+                        nuttig zijn omdat ze het mogelijk maken de feitelijke realisering van de
+                        afkortingen in de bron op een betrouwbare wijze weer te geven; het <ref target="http://www.mufi.info/specs/">Medieval
+                        Unicode Font Initiative</ref> (MUFI) heeft voorstellen gedaan die voorzien in
+                        de meeste leemten die op dit punt nog in Unicode bestonden. De handleiding van 
+                        de recentste MUFI-versie, die voor het merendeel van de benodigde tekens de te gebruiken 
+                        Unicode karakters definieert, is te vinden op <ptr target="http://www.mufi.info/specs/MUFI-Alphabetic-3-0.pdf"/> 
+                        Als tekens nog niet in Unicode beschikbaar zijn gebruiken we definities in de Unicode 
+                        Private Use Area, bij voorkeur de tekens die MUFI heeft gedefinieerd (zie ook 
+                        <ptr target="http://gandalf.aksis.uib.no/mufi/PUAcoord/PUA-4.0-a-2.html"/>. 
+                        <hi rendition="#r-red">PB: beetje aangepast</hi></p>
+                    <p>Hieronder volgt een aantal veelvoorkomende afkortingstekens en hun codering:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<g ref="#bar"/> : -
+<g ref="#apomod"/> : ‘
+<g ref="#usmod"/> : 9
+<g ref="#condes"/> : 9
+<g ref="#etfin"/> : 3
+<g ref="#pflour"/> p (met een krul door de staart)
+<g ref="#pbardes"/> : p (met streep door de staart)</egXML>
+                    <p>De lange s met een streep door de schacht is in Unicode: 1E9C.</p>
+                </div>
+                <div>
+                    <head>Niet-linguïstische verschijnselen in de tekst, bijzondere grafische
+                        tekstweergave in de bron en omissie (rubricatie, onderstreping, dagletters
+                        in kalenders, vorkteksten, marginale tekst (geschreven buiten de
+                        tekstkolommen))</head>
+                    <p>De tekst in het handschrift kan op verschillende manieren door de kopist zijn
+                        opgetekend, zodat bepaalde woorden of passages meer opvallen dan omringende
+                        tekst, of door de toevoeging van speciale tekens een bijzondere waarde
+                        krijgen toegekend. Daarbij kan gebruik zijn gemaakt van inkt van een andere
+                        keur dan in de hoofdtekst is gebruikt, van onderstreping, samenvoeging met
+                        behulp van accolades, enz. Ook kan er tekst op een bijzondere plaats, buiten
+                        de kaders van de hoofdtekst of de aflijning zijn geschreven. Een aantal van
+                        de belangrijkste van dit soort typografische verschijnselen wordt hieronder,
+                        met de gewenste coderingswijze toegelicht.</p>
+                    <div>
+                        <head>Rubriek</head>
+                        <p>Tekst geschreven met rode inkt kan worden gecodeerd met behulp van het
+                            <gi>hi</gi> element met rend="rubric" als nadere specificatie.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<hi rend="rubric">Miserere mei deus</hi></egXML></p>
+                        <p>Waar de rubricator paleografisch moet worden onderscheiden van de
+                            teksthand, zal tevens gebruik moeten worden gemaakt van het
+                            <gi>handShift</gi> element (zie par. 3.2.2.2). 
+                        <hi rendition="#r-red">PB: eenduidiger zou misschien zijn om op <gi>hi</gi>
+                        ook het <att>resp</att>-attribuut toe te staan?</hi></p>
+                    </div>
+                    <div>
+                        <head>Onderstreping</head>
+                        <p>Onderstreping in de tekst wordt gemarkeerd met behulp van het <gi>hi</gi>
+                            element, waarbij de waarde <val>underline</val> wordt gegeven als <att>rend</att>-attribuut.</p>
+                    </div>
+                    <div>
+                        <head>Opengelaten ruimte</head>
+                        <p>Het gebeurt wel dat een kopiist in zijn tekst ruimte open laat,
+                            bijvoorbeeld voor een initiaal of een miniatuur die in een later stadium
+                            zou moeten worden aangebracht, maar nooit werd gerealiseerd. Ook kan een
+                            ruimte zijn opengelaten waarvan niet meteen duidelijk is wat daarvan de
+                            functie is geweest. Dit soort (mogelijk) betekenisvolle lege plekken
+                            worden gecodeerd met een leeg <gi>space</gi> element. Te gebruiken
+                            attributen hierbij zijn <att>dim</att>, waarmee wordt duidelijk gemaakt of de
+                            ruimte horizontaal of verticaal is en <att>quantity</att>, daarmee wordt het
+                            aantal geschatte lettertekens (waarvan de eenheid wordt gespecificeerd
+                            met ‘unit’) gegeven. [<att>verticaal</att> lines, horizontaal characters,
+                            introduceren] <hi rendition="#r-red">PB: in plaats van <gi>space</gi>
+                            kan ook een <gi>note</gi> worden gebruikt.</hi></p>
+                        <p>Als de letters van een woord opzettelijk uiteen zijn geschreven, wordt
+                            dat gecodeerd met <gi>hi</gi>, attribuut <att>rend</att> en waarde ‘spaced’. 
+                            <hi rendition="#r-red">PB of een <gi>note</gi></hi>
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<hi rend="spaced">AMEN</hi></egXML></p>
+                    </div>
+                    <div>
+                        <head>Marginalia</head>
+                        <p>Marginale teksten, geschreven buiten de afschrijving kunnen worden
+                            gemarkeerd met het <gi>note</gi> element. Als het daarbij gaat om
+                            invoegingen of correcties op tekst die in de kolom is geschreven, moet
+                            het <gi>add</gi> of <gi>addSpan</gi> element worden gebruikt. Het <gi>note</gi>
+                            element wordt nog binnen het <gi>l</gi> element geplaatst.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<l><note place="margin-right" type="ms">te eener hueren</note>Den eerste dach van aprilis sijts ghewes</l></egXML></p>
+                    </div>
+                    <div>
+                        <head>Vorkteksten en accolades</head>
+                        <p>Het komt voor dat een tekst met opeenvolgende tekstregels die met
+                            dezelfde woorden beginnen of eindigen (of zelfs in het midden van de
+                            regels gelijkluidende woorden bevatten) worden weergegeven door middel
+                            van een enigszins op accolades lijkend systeem. De woorden die in
+                            verschillende regels hetzelfde zijn worden dan slechts eenmaal
+                            opgeschreven en vanuit of naar die woorden toe trekt de kopiist dan
+                            lijnen naar de regels waar de overige tekst staat. Een voorbeeld daarvan
+                            vinden we in tekst 3 van het Geraardsbergse handschrift.</p>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">[Afbeelding].</egXML>
+                        <p>Deze tekst wordt (enigszins vereenvoudigd) op de volgende manier
+                            gecodeerd met het (niet in de TEI voorkomende) element <gi>ditto</gi>.
+                            [UITWERKEN].
+                            <hi rendition="#r-red">PB: Mike, als je dit tegenkomt, kom even overleggen.</hi>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <head>Opmaak- en katernopbouw-gerelateerde tekst (representanten, reclamen,
+                        custoden)</head>
+                    <p>Representanten zijn tekens die behoren tot de tekst, maar die geschreven zijn
+                        met een doel tijdelijk te functioneren tot de rubricator de letter of het
+                        teken in een andere vorm heeft gerealiseerd. In de TEI guidelines is voor
+                        codering van deze tekens niet voorzien. Wij doen het voorstel hiervoor het
+                        <gi>c</gi> element te gebruiken met als waarde voor het attribuut <att>type</att>: <val>guide</val>.</p>
+                    <p>In een handschrift kan men tekst tegenkomen die buiten de afschrijving is
+                        geschreven en die betrekking heeft op de samenstelling van de katernen.</p>
+                    <p>Het voorkomen en de precieze locaties van katernsignaturen, reclamen en
+                        custoden worden in beginsel in de beschrijving van het handschrift
+                        opgenomen, maar in bijzondere gevallen kunnen deze ook worden gecodeerd in
+                        de transcriptie. Het kan immers voorkomen dat een reclame van speciale
+                        tekstuele betekenis is, bijvoorbeeld als het woord verwijst naar een volgend
+                        katern dat is verdwenen of wanneer het een variante lezing bevat. Hiervoor
+                        kan dan het <gi>fw</gi> element (afkorting voor: forme work) worden ingezet. Het
+                        attribuut <att>place</att> wordt gebruikt voor de aanduiding van de positie van het
+                        gemarkeerde woord (of woorden),
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<fw type="catch" place="bot-right">den roesen</fw></egXML> 
+                    <hi rendition="#r-red">PB: deze waarde voor place hebben we nog niet</hi></p>
+                    <p><hi rendition="#r-red">PB: running titles ook met <gi>fw</gi>-element?</hi></p>
+                </div>
+                <div>
+                    <head>Bijzondere tekens (initialen, paragraafteken, afbreekteken)</head>
+                    <div>
+                        <head>Initialen</head>
+                        <p>Voor initialen en lombarden wordt het <gi>hi</gi> element gebruikt. Met het
+                            attribuut <att>rend</att> en de attribuutwaarde ‘capitalsizeN’ wordt aangegeven
+                            dat het om een (bijzondere) hoofdletter gaat met een hoogte van N
+                            regels, waarbij N vanzelfsprekend variabel is.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<hi rend="capitalsize3">H<hi/>oert</hi></egXML></p>
+                    </div>
+                    <div>
+                        <head>Paragraafteken</head>
+                        <p>Het paragraafteken, semi-paragraafteken en de representant voor het
+                            paragraafteken worden opgevat als noot van de kopiist en als volgt
+                            weergegeven (<att>type</att>=<val>ms</val> om aan te geven dat het 
+                            gaat om een noot die al in het manuscript aanwezig is):
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<note place="margin-left" type="ms"><g ref="#00B6"/></note></egXML>
+                            Een representant voor een paragraafteken wordt dus zo gecodeerd:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<note place="margin-left" type="ms"><c type="guide" ref="#dblsol"/></note></egXML>
+                            NB: het teken //, waarnaar dblsol verwijst, bestaat bestaat wel binnen
+                            het MUFI-voorstel, maar is nog niet geaccepteerd als Unicode.
+                            <hi rendition="#r-red">PB: inmiddels wel</hi>
+                        </p>
+                    </div>
+                    <div>
+                        <head>Afbreekteken</head>
+                        <p>Als een afbreekteken in de tekst van het handschrift geschreven is, dan
+                            gebruiken we daarvoor het <gi>c</gi> element met het atribuut ‘type’en
+                            waarde: shy. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<c type="shy">-</c><lb/></egXML></p>
+                    </div>
+                    <div>
+                        <head>Getallen, letters met zelfnoemfunctie en acrostichons</head>
+                        <p>Getallen worden gecodeerd met het element <gi>num</gi>. In romeinse cijfers
+                            geschreven getallen worden weergeven met attribuut <att>type</att> dat de waarde
+                            ‘roman’ heeft. Het getal wordt niet-genormaliseerd getranscribeerd in
+                            minuskel. <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<num type="roman">ix</num></egXML></p>
+                        <p>Letters met zelfnoemfunctie worden gemarkeerd met het element
+                            <gi>mentioned</gi> en global attibuut type:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<mentioned type="self">v</mentioned></egXML></p>
+                        <p>Letters die deel uitmaken van een acrostichon worden gecodeerd met het
+                            element <gi>c</gi> en attribuut <att>type</att>:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<c type="acrostic">A</c></egXML></p>
+                    </div>
+                    <div>
+                        <head>Figuren en tabellen</head>
+                        <p>[Dient nader uitgewerkt te worden]</p>
+                    </div>
+                    <div>
+                        <head>Afbeeldingen</head>
+                        <p>Afbeeldingen van bladzijden worden opgenomen in het <gi>pb</gi>
+                            element, met behulp van het <att>facs</att>-attribuut, dat naar de url van de
+                            bedoelde afbeelding wijst.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<pb n="f101r" facs="http://www...."/></egXML></p>
+                    </div>
+                    <div>
+                        <head>Paleografisch commentaar en alternatieve lezingen</head>
+                        <p>Opmerkingen over de wijze waarop de kopiist bepaalde letters of
+                            lettercombinaties heeft gerealiseerd, voor zover deze niet te
+                            rangschikken zijn als (zelf)correcties of onduidelijkheid (zie daarvoor
+                            de paragrafen 5.1-5.2) kunnen worden gegeven in een apart gedeelte met
+                            paleografisch commentaar. Dit commentaar wordt gescheiden van de tekst
+                            in het hoofddocument om primaire tekst gescheiden te houden van
+                            secundaire.</p>
+                        <p>We verwijzen daarbij van de noot naar de hoofdtekst. We gebruiken twee
+                            manieren van verwijzen, afhankelijk van de vraag of moet worden verwezen
+                            naar een tekstfragment of naar een bepaald punt in het document.</p>
+                        <p>Wanneer er commentaar moet worden gegeven op een citeerbaar deel van de
+                            tekst gebruiken we het <gi>seg</gi> element, dat wordt geplaatst om de
+                            geciteerde tekst. De tags van het <gi>seg</gi> element moeten wel passen
+                            binnen de hiërarchische structuur van de XML. In gevallen waar dat niet
+                            mogelijk is, waar tekststructurerende grenzen bijvoorbeeld binnen het
+                            tekstfragment vallen, kan het seg-element worden opgesplitst door middel
+                            van het <att>part</att> attribuut, waaraan dan oplopende numerieke waarden worden
+                            toegekend.<hi rendition="#r-red">PB: Herman, ik vind dit een voorbeeld van waar 
+                                we dingen te ingewikeld hebben gemaakt; zullen we niet noten gewoon 
+                                in de tekst plaatsen?</hi></p>
+                        <p>De tweede manier van verwijzen gebruiken we als er commentaar gegeven
+                            moet worden op een verschijnsel dat zich op een welbepaalde plaats
+                            bevindt, die niet zichtbaar is in de hoofdtekst. De editeur plaatst dan
+                            daar waar zich het te becommentariëren verschijnsel voordoet een
+                            <gi>note</gi> element waarin hij vrije tekt schrijft.</p>
+                    </div>
+                    <div>
+                        <head>Opschriften, tussenkopjes, clausen en clauskoppen</head>
+                        <p>Opschriften worden gecodeerd door het element <gi>head</gi>, attribuut <att>type</att> en waarde ‘opschrift’.
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<head type="opschrift">Een vers jeghen gramscip</head></egXML></p>
+                        <p>Een tussenkopje krijgt de waarde ‘tussenkop’:
+                            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+<head type="tussenkop">Hier naer volcht vanden kerstinen . Artuer</head></egXML></p>
+                        <p>Clauskoppen in dialoog- of toneelteksten worden gecodeerd door middel van
+                            het <gi>head</gi> element met attribuut <att>type</att> en waarde ‘speech’.</p>
+                        <p><hi rendition="#r-red">PB: dit impliceert waarschijnlijk dat we niet afdwingen dat een <gi>head</gi>
+                        aan het begin van een tekstuele eenheid staat (wat TEI wel doet).</hi></p>
+                    </div>
+                </div>
+                <div>
+                    <head>Onzekere lezingen en verantwoordelijkheid</head>
+                    <p>Niet alleen bij de transcriptie van tekst die valt binnen bovengenoemde
+                        categorieën, maar bij transcriptie in het algemeen geldt dat er meer of
+                        mindere mate van zekerheid kan bestaan omtrent de gekozen interpretatie van
+                        een verschijnsel in de bron. De TEI Guidelines bieden een mogelijkheid om
+                        een uitspraak te doen over de mate van zekerheid met het <gi>certainty</gi>
+                        element. (Wat hier niet bedoeld wordt zijn de gevallen waarin de tekst in de
+                        bron door wat voor oorzaak dan ook slecht leesbaar is geworden. Daarvoor
+                        wordt het element <gi>unclear</gi> gebruikt, zie paragraaf 0000. 
+                    <hi rendition="#r-red">PB: <gi>certainty</gi> moeten we denk ik niet gaan gebruiken: onzekerheid 
+                        wordt verantwoord in <gi>note</gi>.</hi></p>
+                    <p>Indien er onzekerheid over de juiste transcriptie bestaat kan met het
+                        <gi>respons</gi> element worden aangegeven wie verantwoordelijk is voor een
+                        specifieke oplossing. Met name in gevallen waarbij verscheidene editeurs aan
+                        een transcriptie werken kan dit nuttig zijn.
+                        <hi rendition="#r-red">PB: <gi>respons</gi> moeten we denk ik niet gaan gebruiken: waar 
+                            van toepassing wel <att>resp</att>-attribuut.</hi></p>
+                    <p>Voordat we deze elementen bespreken zullen we ons buigen over tekst die bij
+                        de transcriptie speciale aandacht vraagt.</p>
+                </div>
+                <div rendition="#r-red">
+                    <head>Interpunctie</head>
+                    <p>Bijzondere interpunctie kan worden gecodeerd met het <gi>pc</gi> element. Het <att>unit</att> 
+                    kan worden gebruikt om aan te geven wat voor teksteenheid hier mee wordt begrensd.</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        ... </egXML>
+                    <p>PB: Herman nog bekijken</p>
+                </div>
+                <div rendition="#r-red">
+                    <head>Kritische ingrepen</head>
+                    <p>Uitgangspunt van de reeks is de diplomatische weergave. Wanneer de editeur in overleg met de commissie besluit om toch 
+                        correcties aan te brengen gebeurt dat met behulp van het <gi>corr</gi> element. Samen met de originele weergave (in een 
+                        <gi>sic</gi>-element) worden het <gi>corr</gi>-element geplaatst in een <gi>choice</gi>. Voorbeeld:</p>
+                    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                        <choice><sic>faut</sic><corr>fout</corr></choice></egXML>
+                    <p>PB: Herman nog bekijken</p>
+                </div>
+            </div>
+<div>
+    <head>Literatuur</head>
+    <listBibl>
+        <bibl xml:id="Mertens1994">
+            <author>Mertens, Th.</author>
+            <title>Richtlijnen voor de uitgave van Middeleeuwse Verzamelhandschriften uit de Nederlanden</title>.
+            <pubPlace>Hilversum</pubPlace>:
+            <publisher>Verloren</publisher>,
+            <date>1994</date>.
+        </bibl>
+    </listBibl>
+    
+</div>
+        </body>
+    </text>
+</TEI>

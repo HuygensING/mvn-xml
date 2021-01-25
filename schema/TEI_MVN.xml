@@ -1,0 +1,436 @@
+<?xml version="1.0"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="xml"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <!-- head in plike plaatsen: wordt steeds weggehaald -->
+    <!-- head krijgt steeds ns="" toegevoegd (net als TEI) (en fw ook maar restore niet?)-->
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>MVN customisation</title>
+                <author>Peter Boot</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>for use by whoever wants it</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>created on Thursday 08th November 2007 04:01:41 PM by the form at
+                    http://www.tei-c.org.uk/Roma/</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change when="2008-10-02">charDecl in start attribute </change>
+            <change when="2008-10-02">attribuut place op head</change>
+            <change when="2008-10-02">head in model.inter (nu toegestaan in p)</change>
+            <change when="2008-10-02">Uitgangspunt voor verdere wijzigingen. Gekoppeld aan odd
+                schema, daardoor valideert dit document. prefix mvn ingevuld.</change>
+            <change when="2013-03-07">Add toegevoegd in choice voor open varianten</change>
+            <change when="2013-03-07">Quirebreak verwijderd want nu gb beschikbaar</change>
+            <change when="2013-03-07">sic beschikbaar gemaakt</change>
+            <change when="2013-03-07">Toelichting pc element</change>
+            <change when="2013-03-19">Foreign element toegevoegd</change>
+            <change when="2013-05-16">SeriesStmt toegevoegd en biblScope; resp op head; msDesc
+                toegevoegd voor identifier</change>
+            <change when="2013-06-05">placeName toegevoegd</change>
+            <change when="2015-12-03">Verwijderen diverse overbodige elementen en attributen</change>
+            <change when="2017-08-30">np-attribuut op p toegevoegd</change>
+            <change when="2017-08-30">Verwijder attribuut place van head (tegenwoordig in de standaard)</change>
+            <change when="2018-02-07">Metamark toegevoegd</change>
+            <change when="2018-02-07">Toevoegen type 'verse' op type</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
+            <p>Gemaakt ten behoeven van de diplomatische edities in de MVN-reeks.</p>
+            <schemaSpec ident="TEI_MVN" docLang="en" xml:lang="en" prefix="mvn" start="TEI charDecl">
+                <moduleRef key="core"
+                    except="addrLine address analytic author bibl biblStruct binaryObject cit citedRange date desc distinct divGen email emph gloss graphic headItem headLabel imprint index item label list listBibl measure measureGrp media meeting monogr orig postBox postCode ptr pubPlace publisher q quote ref reg relatedItem rs said series soCalled sp speaker stage street teiCorpus term textLang time"/>
+                <moduleRef key="tei"/>
+                <moduleRef key="header"
+                    except="appInfo application authority availability biblFull cRefPattern calendar calendarDesc catDesc catRef category change classCode classDecl correction correspAction correspContext correspDesc creation distributor edition editionStmt extent funder geoDecl hyphenation interpretation keywords langUsage language licence listChange listPrefixDef namespace normalization notesStmt prefixDef principal punctuation quotation refState refsDecl rendition revisionDesc samplingDecl segmentation sponsor stdVals styleDefDecl tagUsage tagsDecl taxonomy textClass typeNote xenoData"/>
+                <moduleRef key="textstructure"
+                    except="argument byline div1 div2 div3 div4 div5 div6 div7 docAuthor docDate docEdition docImprint docTitle epigraph floatingText front imprimatur opener postscript salute titlePage titlePart trailer"/>
+                <moduleRef key="gaiji" except="charProp glyph glyphName localName unicodeName value"/>
+                <moduleRef key="linking"
+                    except="ab alt altGrp join joinGrp link linkGrp timeline when"/>
+                <moduleRef key="msdescription"
+                    except="accMat acquisition additional additions adminInfo altIdentifier binding bindingDesc catchwords collation collection colophon condition custEvent custodialHist decoDesc decoNote depth dim dimensions explicit filiation finalRubric foliation height heraldry history incipit layout layoutDesc locus locusGrp material msContents msItem msItemStruct msPart musicNotation objectDesc objectType origDate origPlace origin physDesc provenance recordHist repository rubric scriptDesc seal sealDesc secFol signatures source stamp summary support supportDesc surrogates typeDesc watermark width"/>
+                <moduleRef key="transcr"
+                    except="facsimile line listTranspose mod redo secl sourceDoc substJoin surface surplus transpose undo zone"/>
+                <elementSpec ident="addSpan" module="transcr" mode="change">
+                    <desc>(MVN) Wordt gebruikt voor het coderen van langere toevoegingen aan de
+                        tekst. addSpan markeert de plaats waar de toevoeging begint. Het
+                        to-attribuut wijst naar het einde van de toevoeging. Zie de documentatie van
+                        het add-element voor de place-, hand- en rend-attributen. &amp;#xD; (TEI)
+                        marks the beginning of a longer sequence of text added by an&amp;#xD;
+                        author, scribe, annotator or corrector (see also&amp;#xD; add)</desc>
+                </elementSpec>
+                <elementSpec ident="damage" module="transcr" mode="change">
+                    <desc>(MVN) Wordt gebruikt voor onopzettelijke schade aan het manuscript. Kan
+                        een gap- of een supplied-element bevatten. Kan ook gebruikt worden als leeg
+                        element. In afwijking van de TEI-definities kan in de MVN-reeks een
+                        damage-element rechtstreeks deel uitmaken van bijvoorbeeld een body, div of
+                        lg. (TEI)contains an area of damage to the text witness.</desc>
+                </elementSpec>
+                <elementSpec ident="fw" module="transcr" mode="change">
+                    <desc>(MVN) Het fw-element gebruiken we (op het moment) alleen voor custoden.
+                        Het type-attribut krijgt de waarde \'catch\'. Het place-attribuut geeft de
+                        locatie aan. (TEI) contains a running head (e.g. a header, footer),
+                        catchword, or similar material appearing on the current page.</desc>
+                </elementSpec>
+                <elementSpec ident="restore" module="transcr" mode="change">
+                    <desc>(MVN) Het restore-element gebruiken we om aan te geven dat een eerdere
+                        verwijdering (aangegeven door een del-element) is ongedaan gemaakt. Het
+                        hand-attribuut geeft aan welke hand verantwoordelijk is voor het herstel.
+                        (TEI)indicates restoration of text to an earlier state by cancellation of an
+                        editorial or authorial marking or instruction.</desc>
+                </elementSpec>
+                <elementSpec ident="space" module="transcr" mode="change">
+                    <desc>(MVN) Wordt gebruikt voor opengelaten ruimte in het manuscript. Het
+                        dim-attribuut heeft de waarde \\\'horizontal\\\' of \\\'vertical\\\'. Het
+                        extent-attribuut geeft de omvang van de opengelaten ruimte aan. (TEI)
+                        indicates the location of a significant space in the copy text.</desc>
+                </elementSpec>
+                <elementSpec module="textstructure" ident="TEI" mode="change">
+                    <altIdent>MVN</altIdent>
+                </elementSpec>
+                <elementSpec ident="back" module="textstructure" mode="change">
+                    <desc>(MVN) Elke MVN-editie bevat een back-element als laatste onderdeel van de
+                        text. Zie de sectie over \\\'De globale structuur van een elektronische
+                        MVN-editie\\\'. Dit back element bevat de annotatie bij de editie. (TEI)
+                        contains any appendixes, etc. following the main part of a text.</desc>
+                </elementSpec>
+                <elementSpec ident="body" module="textstructure" mode="change">
+                    <desc>(MVN) Elke tekst uit het verzamelhandschrift komt overeen met een
+                        text-element in het TEI-document. Die \\\'text\\\' bevat alleen een
+                        body-element, waarbinnen de tekst wordt getranscribeerd. Andere mogelijke
+                        onderdelen van text (\\\'front\\\' en \\\'back\\\') zijn voor de individuele
+                        verzamelde teksten niet van toepassing. Alleen de editie als geheel heeft
+                        een \\\'back\\\'. (TEI) contains the whole body of a single unitary text,
+                        excluding any front or back matter.</desc>
+                </elementSpec>
+                <elementSpec ident="div" module="textstructure" mode="change">
+                    <desc>(MVN) Geeft, waar nodig een interne geleding van een tekst aan. (TEI)
+                        contains a subdivision of the front, body, or back of a text.</desc>
+                </elementSpec>
+                <elementSpec ident="closer" module="textstructure" mode="change">
+                    <desc>(MVN) Wordt gebruikt voor onderschriften, bijschriften, verstellingen,
+                        groeten, meta-opmerkingen (zoals &amp;#x2018;ghecolationneert&amp;#x2019;)
+                        of slotopmerkingen (Amen, Explicit) die geen deel uitmaken van de
+                        hoofdtekst. (TEI) groups together dateline, byline, salutation, and similar
+                        phrases appearing as a final group at the end of a division, especially of a
+                        letter.</desc>
+                </elementSpec>
+                <moduleRef key="analysis" except="cl interp interpGrp m phr s span spanGrp"/>
+                <elementSpec ident="w" module="analysis" mode="change">
+                    <desc>(MVN) wordt gebruikt voor het coderen van een enkel woord. Gebruiken we
+                        alleen voor het lemmatiseren van woorden ten behoeve van het register van
+                        incipits. (TEI) represents a grammatical (not necessarily orthographic)
+                        word.</desc>
+                </elementSpec>
+                <elementSpec ident="milestone" module="core" mode="change">
+                    <desc>(MVN) Eelement liever niet gebruiken, maar signaleren dat er behoefte aan
+                        bestaat (TEI) marks a boundary point separating any kind of section of a
+                        text, as indicated by changes in a standard reference system, where the
+                        section is not represented by a structural element.</desc>
+                </elementSpec>
+                <!--                <elementSpec ident="milestone" module="core" mode="change">
+                    <equiv name="quirebreak"/>
+                    <desc>Quire break</desc>
+                    <attList>
+                        <attDef ident="type">
+                            <valList>
+                                <valItem ident="quire"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+-->
+                <!--                <elementSpec ident="qb" ns="http://www.tei-c.org/ns/1.0" mode="add">
+                    <equiv name="quirebreak"/>
+                    <gloss>quire break</gloss>
+                    <desc>(MVN) Wordt gebruikt voor het coderen van een nieuw katern.&#xD; Ten
+                        behoeve van de MVN ge&amp;#xEF;ntroduceerde speciale vorm van
+                        het&#xD; TEI milestone-element. </desc>
+                    <classes>
+                        <memberOf key="model.milestoneLike"/>
+                    </classes>
+                    <content>
+                        <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+                    </content>
+                </elementSpec>
+-->
+                <elementSpec ident="c" module="analysis" mode="change">
+                    <desc>(MVN) c wordt gebruikt om een enkele letter te coderen. We doen dit alleen
+                        in bijzondere gevallen: het coderen van een afbreekstreepje, het coderen van
+                        een representant of guide-letter (type=\"guide\") of het coderen van een
+                        letter die deel uitmaakt van een acrostichon (type=\"acrostich\"). Zie
+                        verder de richtlijnen. (TEI) represents a character.</desc>
+                    <attList>
+                        <attDef ident="type" mode="change" usage="opt">
+                            <desc>guide: representant; acrostich: letter in acrostichon; shy:&#xD;
+                                afbrekingsteken</desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:ref
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                                    name="data.enumerated"/></datatype>
+                            <valList type="closed" mode="replace">
+                                <valItem ident="guide"/>
+                                <valItem ident="acrostich"/>
+                                <valItem ident="shy"/>
+                                <valItem ident="verse"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="name" module="core" mode="change">
+                    <desc>(MVN) Wordt gebruikt bij het aanmaken van de registers. In het
+                        reg-attribuut wordt een geregulariseerde vorm van de naam opgegeven. (TEI)
+                        contains a proper noun or noun phrase.</desc>
+                    <attList>
+                        <attDef ident="reg" mode="add" usage="opt">
+                            <desc>reg attribuut bevat een geregulariseerde versie van de naam ten
+                                behoeve van de registers</desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:text
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"/></datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="note" module="core" mode="change">
+                    <desc>(MVN) Noten op de uitgegeven tekst komen te staan in een afzonderlijke div
+                        in de back van het document.(TEI) contains a note or annotation.</desc>
+                </elementSpec>
+                <elementSpec ident="cb" module="core" mode="change">
+                    <desc>(MVN) geeft een kolom overgang weer. Het n-attribuut geeft een
+                        kolomaanduiding (a, b, etc.). Een xml:id attribuut identificeert het
+                        element. (TEI) marks the boundary between one column of a text and the next
+                        in a standard reference system.</desc>
+                </elementSpec>
+                <elementSpec ident="del" module="core" mode="change">
+                    <desc>(MVN) Bevat een passage die bewust is verwijderd. Zie de documentatie voor
+                        het type- en rend-attribuut. Het hand-attribuut geeft de verantwoordelijke
+                        kopiist aan. Voor verwijderde tekst die structurele grenzen overschrijdt
+                        gebruiken we het delSpan-element. (TEI) contains a letter, word or passage
+                        deleted, marked as deleted, or otherwise indicated as superfluous or
+                        spurious in the copy text by an author, scribe, annotator, or
+                        corrector.</desc>
+                </elementSpec>
+                <elementSpec ident="gap" module="core" mode="change">
+                    <desc>(MVN) Markeert een plaats die vanwege tekstbeschadiging of tekstverlies
+                        niet kan worden getranscribeerd. (Voor bewuste verwijdering zie het
+                        del-element). De beschadiging zelf wordt gecodeerd met het damage-element.
+                        Zie de sectie \\\'Tekstbeschadiging en tekstverlies\\\' in de documentatie.
+                        (TEI) indicates a point where material has been omitted in a transcription,
+                        whether for editorial reasons described in the TEI header, as part of
+                        sampling practice, or because the material is illegible or inaudible.</desc>
+                </elementSpec>
+                <elementSpec ident="head" module="core" mode="change">
+                    <desc>(MVN) Head-elementen worden gebruikt voor koppen en tussenkoppen. Anders
+                        dan in de TEI-richtlijnen kunnen in de MVN-reeks head elementen voorkomen
+                        zonder dat een nieuwe hi&amp;#xEB;rarchische eenheid begint. (TEI) contains
+                        any type of heading, for example the title of a section, or the heading of a
+                        list, glossary, manuscript description, etc.</desc>
+                    <classes mode="change">
+                        <memberOf key="model.inter" mode="add"/>
+                    </classes>
+<!--                    <attList>
+                        <attDef ident="place" mode="add" usage="opt">
+                            <desc>Geeft de plaats waar een kop staat: margin-top, margin-left, etc.
+                                Correcte waarde in de toekomst afdwingen </desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:ref
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                                    name="data.enumerated"/></datatype>
+                        </attDef>
+<!-\-                        <attDef ident="resp" mode="add" usage="opt">
+                            <desc>Wijst de verantwoordelijke aan voor het gebruik van deze titel
+                                (=editeur handschrift)</desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:ref
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                                    name="data.pointer"/></datatype>
+                        </attDef>
+-\->                    </attList>
+-->                </elementSpec>
+                <elementSpec ident="hi" module="core" mode="change">
+                    <desc>(MVN) Wordt gebruikt voor, onder andere, rubriek (attribuut rend bevat de
+                        kleur van de inkt), onderstreping (rend=\\\"underline\\\"), kapitalen
+                        (rend=\\\"capitalsizeN\\\", N=1,2,3, etc.). (TEI) marks a word or phrase as
+                        graphically distinct from the surrounding text, for reasons concerning which
+                        no claim is made.</desc>
+                </elementSpec>
+                <elementSpec ident="l" module="core" mode="change">
+                    <desc>(MVN) Een l-element bevat een metrische versregel. Het lb-element
+                        daarentegen geeft een nieuwe manuscriptregel aan. In het algemeen zal dus
+                        bij po&amp;#xEB;zie elke regel gecodeerd worden door een lb &amp;#xE9;n een
+                        l-element. Wanneer meerdere metrische regels op &amp;#xE9;&amp;#xE9;n
+                        manuscriptregel staan, geldt: &amp;#xE9;&amp;#xE9;n lb, meerdere l\\\'s. Het
+                        n-attribuut op het l-element geeft de tekst-regelnummering weer. (TEI)
+                        contains a single, possibly incomplete, line of verse.</desc>
+                </elementSpec>
+                <elementSpec ident="lb" module="core" mode="change">
+                    <desc>(MVN) het lb-element geeft het begin van een nieuwe manuscriptregel weer.
+                        (De versregel wordt gecodeerd met het l-element). Het n-attribuut geeft de
+                        regelnummering per foliumzijde of kolom weer. (TEI) marks the start of a new
+                        (typographic) line in some edition or version of a text.</desc>
+                    <attList>
+                        <attDef ident="np" mode="add">
+                            <desc>MVN attribuut: geeft tekstregelnummering voor prozateksten</desc>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="lg" module="core" mode="change">
+                    <desc>(MVN) Strofes in po&amp;#xEB;zie. (TEI) contains a group of verse lines
+                        functioning as a formal unit, e.g. a stanza, refrain, verse paragraph,
+                        etc.</desc>
+                </elementSpec>
+                <elementSpec ident="mentioned" module="core" mode="change">
+                    <desc>(MVN) (in de transcriptie) Gebruikt voor letters met zelfnoemfunctie (In
+                        noten) Gebruikt als markering van de uit de hoofdtekst aangehaalde tekst.
+                        (TEI) marks words or phrases mentioned, not used.</desc>
+                </elementSpec>
+                <elementSpec ident="num" module="core" mode="change">
+                    <desc>(MVN) Getallen worden gecodeerd met het num-element. In romeinse cijfers
+                        geschreven getallen worden weergeven met attribuut
+                        &amp;#x2018;type&amp;#x2019; dat de waarde &amp;#x2018;roman&amp;#x2019;
+                        heeft. Het getal wordt niet-genormaliseerd getranscribeerd in minuskel.
+                        (TEI) contains a number, written in any form.</desc>
+                </elementSpec>
+                <elementSpec ident="p" module="core" mode="change">
+                    <desc>(MVN) p-elementen markeren alinea\\\'s. Regelovergangen in alinea\\\'s
+                        worden gemarkeerd met een lb-element. (TEI) marks paragraphs in
+                        prose.</desc>
+                    <attList>
+                        <attDef ident="np" mode="add">
+                            <desc>MVN attribuut: geeft tekstregelnummering voor prozateksten</desc>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="pb" module="core" mode="change">
+                    <desc>(MVN) Markeert een nieuwe foliumzijde. Het n-attribuut geeft de signatuur.
+                        Optioneel kan het pb-element ook gebruikt worden om pagina-overgangen in een
+                        corresponderende boekuitgave te coderen (om literatuurverwijzingen
+                        eenvoudiger te kunnen nagaan). (TEI) marks the boundary between one page of
+                        a text and the next in a standard reference system.</desc>
+                </elementSpec>
+                <elementSpec ident="ptr" module="core" mode="change">
+                    <desc>PB: hebben we dit in de transcriptie nog nodig?&#xD; (MVN) Wordt gebruikt
+                        voor een verwijzing naar &amp;#xE9;&amp;#xE9;n of meer locaties in hetzelfde
+                        document of elders. Een ptr is een leeg element, anders dan het
+                        vergelijkbare ref-element. Zie daarvoor verder de documentatie. De
+                        locatie(s) worden gegeven in het target-attribuut, bijvoorbeeld als volgt:
+                        target=\\\'#abc #def\\\' In dit geval zijn \\\'abc\\\' en \\\'def\\\'
+                        (zonder de hekjes) waarden die elders in het document voorkomen als waarde
+                        van het xml:id-attribuut. Locaties buiten het document worden aangewezen via
+                        hun webadres (http://... etc.). (TEI) defines a pointer to another
+                        location.</desc>
+                </elementSpec>
+                <elementSpec ident="unclear" module="core" mode="change">
+                    <desc>(MVN) Gebruikt om passages aan te duiden waarvan de lezing niet geheel
+                        zeker is, bijvoorbeeld omdat de kopiist heeft getracht de passage te
+                        verwijderen of omdat de tekst anderszins moeilijk leesbaar is. (TEI)
+                        contains a word, phrase, or passage which cannot be transcribed with
+                        certainty because it is illegible or inaudible in the source.</desc>
+                </elementSpec>
+                <classSpec ident="att.global" type="atts" mode="change" module="tei">
+                    <attList>
+                        <attDef ident="help" mode="change" usage="opt">
+                            <desc>(MVN) wordt gebruikt om twijfels over de juistheid van de
+                                betreffende codering vast te leggen. Deze twijfels zouden aan het
+                                eind van het codeertraject opgelost moeten zijn. </desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:text
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"/></datatype>
+                        </attDef>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="xml:base" mode="delete"/>
+                        <attDef ident="xml:space" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classSpec ident="att.global.linking" module="linking" mode="change" type="atts">
+                    <attList>
+                        <attDef ident="synch" mode="delete"/>
+                        <attDef ident="sameAs" mode="delete"/>
+                        <attDef ident="copyOf" mode="delete"/>
+                        <attDef ident="exclude" mode="delete"/>
+                        <attDef ident="select" mode="delete"/>
+                        <attDef ident="next" mode="delete"/>
+                        <attDef ident="prev" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classSpec ident="att.global.analytic" module="analysis" mode="change" type="atts">
+                    <attList>
+                        <attDef ident="ana" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <elementSpec ident="anchor" module="linking" mode="change">
+                    <attList>
+                        <attDef ident="transpositionSource" mode="add" usage="opt">
+                            <desc>Wijst naar een element (waarschijnlijk een seg-element) waarvan de
+                                bron aangeeft dat het naar de locatie van het huidige element moet
+                                worden verplaatst. </desc>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:ref
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                                    name="data.pointer"/></datatype>
+                        </attDef>
+                        <attDef ident="type" mode="change"/>
+                        <attDef ident="subtype" mode="change"/>
+                        <attDef ident="xml:id" mode="change"/>
+                        <attDef ident="n" mode="change"/>
+                        <attDef ident="xml:lang" mode="change"/>
+                        <attDef ident="rend" mode="change"/>
+                        <attDef ident="rendition" mode="change"/>
+                        <attDef ident="xml:base" mode="change"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="seg" module="linking" mode="change">
+                    <attList>
+                        <attDef ident="transpositionSource" mode="add" usage="opt">
+                            <desc/>
+                            <datatype minOccurs="1" maxOccurs="1"><rng:ref
+                                    xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                                    name="data.pointer"/></datatype>
+                        </attDef>
+                        <attDef ident="subtype" mode="change"/>
+                        <attDef ident="type" mode="change"/>
+                        <attDef ident="function" mode="change"/>
+                        <attDef ident="part" mode="change"/>
+                        <attDef ident="xml:id" mode="change"/>
+                        <attDef ident="n" mode="change"/>
+                        <attDef ident="xml:lang" mode="change"/>
+                        <attDef ident="rend" mode="change"/>
+                        <attDef ident="rendition" mode="change"/>
+                        <attDef ident="xml:base" mode="change"/>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="pc" module="analysis" mode="change">
+                    <desc>(MVN) Kunnen we gebruiken voor het onderscheiden van bijvoorbeeld
+                        vers-markerende interpunctie en andere innterpunctie. Gebruik daarvoor het
+                        unit-attribuut. (TEI) contains a character or string of characters regarded
+                        as constituting a single punctuation mark.</desc>
+                </elementSpec>
+                <elementSpec ident="add" module="core" mode="change">
+                    <classes mode="change">
+                        <memberOf key="model.choicePart"/>
+                    </classes>
+                </elementSpec>
+                <moduleRef key="namesdates"
+                    except="addName affiliation age birth bloc climate death education event faith floruit forename genName geo geogFeat langKnowledge langKnown listEvent listNym listOrg listPerson listPlace listRelation location nameLink nationality nym occupation offset org orgName persName person personGrp place population relation residence roleName sex socecStatus state surname terrain trait"/>
+                <classSpec ident="att.global.change" module="transcr" mode="change" type="atts">
+                    <attList>
+                        <attDef ident="change" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classSpec ident="att.global.rendition" mode="change" type="atts" module="tei">
+                    <attList>
+                        <attDef ident="rendition" mode="delete"/>
+                        <attDef ident="style" mode="delete"/>
+                    </attList>
+                </classSpec>
+                <classSpec ident="att.global.responsibility" module="tei" mode="change" type="atts">
+                    <attList>
+                        <attDef ident="cert" mode="delete"/>
+                    </attList>
+                </classSpec>
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>
