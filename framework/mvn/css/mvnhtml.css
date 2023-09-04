@@ -127,6 +127,11 @@ span.rubric {
 span.subst {
     border:thin solid green;
 }
+span.superscript {
+    vertical-align: super;
+    font-size: 70%;
+    line-height: 0;
+}
 span.ul {
   display: inline;
   text-decoration: underline;
