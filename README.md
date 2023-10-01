@@ -5,7 +5,7 @@
 This repository contains XML files for the Huygens Institute's editions in the MVN series (Middeleeuwse Verzamelhandschriften uit de Nederlanden, = Medieval Miscellanies from the Low Countries).
 
 The XML files are contained in directories by manuscript:
-- vds: Handschrift Vanden Stock, Hs. Brussel, KBR, II 116, edited by Daniël Ermens, available at [https://vds.mvn.huygens.knaw.nl/](https://vds.mvn.huygens.knaw.nl/)https://vds.mvn.huygens.knaw.nl/
+- vds: Handschrift Vanden Stock, Hs. Brussel, KBR, II 116, edited by Daniël Ermens, available at https://vds.mvn.huygens.knaw.nl/
 - serrure: Handschrift-Serrure, Hs. Brussel, KBR, II 144, edited by Erika Langbroek and Annelies Roeleveld, available at https://serrure.mvn.huygens.knaw.nl
 - bs: Het Blauwe Schuit-handschrift, Hs. Den Haag, Koninklijke Bibliotheek, 75 H 57, edited by Herman Brinkman, available at https://bs.mvn.huygens.knaw.nl/[https://bs.mvn.huygens.knaw.nl/](https://bs.mvn.huygens.knaw.nl/)
 - hbsr: De Heber-Serrurecodex, Gent, Universiteitsbibliotheek, Hs. 1374, edited by Renée Gabriël en Mike Kestemont, available at https://hbsr.mvn.huygens.knaw.nl/[https://hbsr.mvn.huygens.knaw.nl/](https://hbsr.mvn.huygens.knaw.nl/)
