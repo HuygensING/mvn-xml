@@ -5,7 +5,14 @@ xmlns:func="http://exslt.org/functions"
 xmlns:mvn="http://www.huygensinstituut.knaw.nl/projecten/mvn/"
 extension-element-prefixes="func">
     
-<xsl:param name="greyabbr">yes</xsl:param>    
+    
+    
+    <!-- Dit lijkt een verouderde versie van het stylesheet -->
+    
+    
+    
+    
+    <xsl:param name="greyabbr">yes</xsl:param>    
     <xsl:param name="process">yes</xsl:param>    
     <xsl:param name="expand">no</xsl:param>    
     <xsl:param name="newline">no</xsl:param>    

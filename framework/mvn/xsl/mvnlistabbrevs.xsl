@@ -53,7 +53,13 @@
 	        </xsl:otherwise>
 	    </xsl:choose>
 	</xsl:template>
-
+	
+	<xsl:template match="tei:hi">
+		<span class="{@rend}" title="{@rend}">
+			<xsl:apply-templates/>
+		</span>
+	</xsl:template>
+	
     <func:function name="mvn:expan">
         <xsl:param name="choice"/>
         <func:result>
