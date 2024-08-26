@@ -128,6 +128,11 @@
         <mapping type="mufi">&#xF153;</mapping>
         <mapping type="junicode">&#xF153;</mapping>
     </char>
+    <char xml:id="szlig">
+        <charName>LATIN SMALL LETTER SHARP S</charName>
+        <mapping type="standard">&#x00DF;</mapping>
+        <note>In gebruik in Freckenhorst.</note>
+    </char>
     <char xml:id="slongbar">
         <charName>LATIN SMALL LETTER LONG S WITH STROKE</charName>
         <mapping type="mufi">&#xe7ff;</mapping>
@@ -174,6 +179,11 @@
     <char xml:id="ring">
         <charName>RING ABOVE</charName>
         <mapping type="standard">&#x02da;</mapping>
+    </char>
+    <char xml:id="combring">
+        <charName>COMBINING RING ABOVE</charName>
+        <mapping type="standard">&#x030a;</mapping>
+        <note>In gebruik in Freckenhorst.</note>
     </char>
     <char xml:id="bar">
         <charName>COMBINING ABBREVIATION MARK BAR ABOVE</charName>
